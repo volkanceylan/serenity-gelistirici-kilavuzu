@@ -16,7 +16,7 @@ Bu başka uygulama tipleri için kullanılamayacağı anlamına gelmez tabi ki. 
 
 ## Serenity ile İlgili Bilgi Kaynakları
 
-Bu kılavızı ve öğreticilerini okuduktan sonra daha fazla bilgi için aşağıdaki kaynaklardan faydalanabilirsiniz.
+Bu kılavuzu ve öğreticilerini okuduktan sonra daha fazla bilgi için aşağıdaki kaynaklardan faydalanabilirsiniz.
 
 <dl>
 
