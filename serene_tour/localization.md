@@ -6,7 +6,7 @@ Aktif dili ispanyolcaya (spanish) çevirmeyi deneyin.
 
 ![Serene Dashboard Spanish](img/serene_customers_spanish.png)
 
-> İspanyolcam olmadığından makina çevirisi kullandım, hatalar için kusura bakmayın...
+> İspanyolcam olmadığından makina çevirisi kullandım, hatalar için kusura bakılmasın...
 
 Dili değiştirdiğinizde, temadaki durumdan farklı olarak, sayfa yeniden yüklendi.
 
