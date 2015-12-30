@@ -12,7 +12,7 @@ Click the *Online (Çevrimiçi)* bölümüne tıklayın ve *Retrieving informati
 
 ![Yeni Proje Online](img/new_project_dialog_online.jpg)
 
-*Search Online Templates (Çevrimiçi Şablonlarda Ara)* başlıklı kuyuya *SERENE* yazıp ENTER a basın.
+*Search Online Templates (Çevrimiçi Şablonlarda Ara)* başlıklı kutuya *SERENE* yazıp ENTER a basın.
 
 *Serene (Serenity Application Template)* öğesini göreceksiniz:
 
