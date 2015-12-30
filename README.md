@@ -11,7 +11,7 @@ Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en
 
 Serenity, birçok veri giriş ekranından oluşan iş uygulamaları ya da dışarı açık web sitelerinin yönetim arayüzleri için biçilmiş kaftandır.
 
-Tabi ki, bu başka uygulama tipleri için kullanılamayacağı anlamına gelmez. Script versiyonlama, paketleme, önbellekleme, kod üretimi, akıcı sql oluşturucular gibi birçok özelliği her türlü uygulama için faydalı olabilir.
+Tabi ki, bu başka uygulama tipleri için de kullanılamayacağı anlamına gelmez. Script versiyonlama, paketleme, önbellekleme, kod üretimi, akıcı sql oluşturucular gibi birçok özelliği her türlü uygulama için faydalı olabilir.
 
 
 ## Serenity ile İlgili Bilgi Kaynakları
