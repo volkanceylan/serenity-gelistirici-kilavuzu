@@ -4,7 +4,7 @@
 * [Başlangıç](getting_started/README.md)
    * [Serene'nin Visual Studio Galerisinden Kurulumu](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Serene'nin Direk Visual Studio İçinden Kurulumu](getting_started/installing_serene_directly_from_visual_studio.md)
-   * [Starting Serene](getting_started/starting_serene.md)
+   * [Serene'nin Başlatılması](getting_started/starting_serene.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
    * [Theming](serene_tour/theming.md)
    * [Localization](serene_tour/localization.md)
