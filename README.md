@@ -9,7 +9,7 @@ Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en
 
 ## Bu Platform Kimler ve Ne İçin?
 
-Serenity, birçok veri giriş ekranından oluşan iş uygulamaları ya da dışarı açık web sitelerinin yönetim arayüzlerine yönelik tasarlanmıştır.
+Serenity, birçok veri giriş ekranından oluşan iş uygulamaları ya da dışarı açık web sitelerinin yönetim arayüzleri için biçilmiş kaftandır.
 
 Bu başka uygulama tipleri için kullanılamayacağı anlamına gelmez tabi ki. Script versiyonlama, paketleme, önbellekleme, kod üretimi, akıcı sql oluşturucular gibi birçok özelliği her türlü uygulama için faydalı olabilir.
 
