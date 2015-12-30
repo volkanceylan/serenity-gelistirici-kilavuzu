@@ -20,22 +20,23 @@ Uygulama başladığında, `admin` kullanıcı adı ve `serenity` şifresini kul
 
 ![Giriş Ekranı](img/login_screen.jpg)
 
-The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
+Örnek uygulama, Microsoft'tan eski dostumuz Northwind veritabanını ve bu veriler için Serenity Code Generator ile üretilmiş servis ve kullanıcı arayüzlerini içerir.
 
-### Adding Project Dependency
+### Proje Bağımlılığı (Project Dependency) Tanımlanması
 
-The output of *Serene1.Script* project (Serene1.Script.Site.js) is copied under *Serene1.Web/scripts/site* on build. 
+*Serene1.Script* projesinin derlenmesi sonucu oluşan (Serene1.Script.Site.js) dosyası, derleme sonucunda *Serene1.Web/scripts/site* altına kopyalanmaktadır.
 
-By default, Visual Studio only builds Serene1.Web project when you press F5 to run. 
+Ancak Visual Studio, varsayılan olarak, sadece başlangıç projesi olan *Serene1.Web* i derler.
 
-> This is controlled by a setting under Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run". It is not recommended to change it.
+> Bu durum *Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run"* seçeneği tarafından kontrol edilmektedir. Değiştirmeniz tavsiye edilmez.
 
-To make Script project also build when Web project is run, right click Serene1.Web project, click *Build Dependencies -> Project Dependencies* and check *Serene1.Script* under *Dependencies* tab.
+Script projesinin de, Web projesi çalıştırıldığında derlenmesi için, *Serene1.Web* projesine sağ tuşla tıklayın, *Build Dependencies -> Project Dependencies* menüsüne girip, *Dependencies* altındaki *Serene1.Script* i işaretleyin.
 
-> Unfortunately, there is no way, we can set this dependency in Serene template.
+Bu ayarlamayı yapmadığınız taktirde, ileride kod üretip, script projesini derlemeden F5 e basarsanız, tarayıcınızda bazı script hatalarıyla karşılaşabilirsiniz.
 
+> Malesef Serene şablonunda bu bağımlılığı bizim ayarlayabilmemiz şu an için mümkün değil.
 
-### Troubleshooting Connection Problems
+### Bağlantı Sorunlarını Gidermek
 
 If you are getting a connection error like the following while starting Serene for first time:
 
