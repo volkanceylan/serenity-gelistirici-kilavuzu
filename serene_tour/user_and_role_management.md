@@ -10,49 +10,49 @@ Serene kullanıcı, rol ve hak yönetimi sistemine sahiptir.
 
 Aynısını *Translators* için de tekrarlayın.
 
-![Create Admin Role](img/create_admin_role.png)
+![Admin Rolünün Oluşturulması](img/create_admin_role.png)
 
-Then click role *Administrators* to open edit form, and click *Edit Permissons* button to modify its permissions. Check all boxes to grant every permisson to this role, then click *OK*.
+Sonra, *Administrators* rolüne tıklayıp düzenleme formunu açın ve *Edit Permissons (Hakları Düzenle)* düğmesine basarak yetki düzenleme ekranını açın. Tüm işaret kutularını doldurarak, role bütün yetkileri verin, ve ardından *OK (Tamam)* a tıklayın.
 
-![Admin Permissions](img/admin_permissions.png)
+![Admin Yetkileri](img/admin_permissions.png)
 
-Repeat same steps for the *Translations* role but this time grant only the *Administration: Languages and Translations* permission.
+Aynı adımları *Translations* rolü için de tekrarlayın, fakat bu sefer sadece *Administration: Languages and Translations (Yönetim: Diller ve Çeviriler)* yetkisini verin.
 
-Navigate to *Administration / User Management* page to add more users.
+Yeni kullanıcılar tanımlamak için *Administration / User Management (Sistem Yönetimi / Kullanıcı Yönetimi)* sayfasını açın.
 
-Click *admin* user to edit its details.
+Öncelik *admin* kullanıcısına tıklayarak detaylarını düzenleyin.
 
-![Edit Admin User](img/edit_admin_user.png)
+![Admin Kullanıcısını Düzenle](img/edit_admin_user.png)
 
-Here you can change admin details like username, display name, email.
+Burada, admin kullanıcısının kullanıcı adı, görünen ismi, e-posta gibi bilgilerini düzenleyebilirsiniz.
 
-You can also change its password (which is *serenity* by default) by typing into *Password* and *Confirm Password* inputs and clicking *Update*.
+Ayrıca şifresini de değiştirebilirsiniz (varsayılan *serenity*). Bunun için *Password (Şifre)* and *Confirm Password (Şifre Onay)* sahalarına aynı şifreyi girdikten sonra *Update (Güncelle)* ye tıklamalısınız.
 
-> You can also delete it but this would make your site unusable as you wouldn't be able to login.
+> Bu kullanıcıyı silmeniz de mümkün ancak bu durumda giriş yapamayacak duruma gelebilirsiniz.
 
-*admin* is a special user in Serene, as it has all permissions even if none is explicitly granted to him.
+*admin*, varsayılan olarak Serene için özel bir kullanıcıdır. Kendisine arayüzden bir yetki verilmemiş olsa da, tüm yetkilere sahip kabul edilir.
 
-Lets create another one and grant roles / permissions to it.
+Başka bir kullanıcı oluşturup kendisine yetki verelim.
 
-Close this dialog, click new user and type *translator* as username. Fill in other fields as you'd like, then click *Update*.
+Bu diyaloğu kapatın, *New User (Yeni Kullanıcı)* ya tıklayın, ve kullanıcı adı olarak  *translator* girin. Diğer alanları istediğiniz gibi doldurduktan sonra *Save (Kaydet)* e basın.
 
-![Create Translator User](img/create_translator_user.png)
+![Translator Kullanıcısının Oluşturulması](img/create_translator_user.png)
 
-> You may have noticed there is a *Apply Changes* button with a black disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
+> Belki farketmiş olabilirsiniz. *Save (Kaydet)* düğmesinin sağında siyah disk ikonuna sahip bir de *Apply Changes (Değişiklikleri Uygula)* düğmesi bulunur. *Save*'den farklı olarak, bu butonu kullandığınızda, form açık kalır ve kayıt sonrasında bilgilerin nasıl göründüğünü görebilirsiniz. Ayrıca formu kapatmadan yetkilerini de düzenleyebilirsiniz.
 
-Now click *Translator* role to open its edit form and click *Edit Roles*. Grant him *Translators* role and click *OK*.
+Şimdi *Translator* rolüne tıklayıp düzenleme formunu açın ve *Edit Roles (Rolleri Düzenle)* ye basın. Kullanıcıya *Translators* rolünü verin ve *OK (Tamam)* a basın.
 
-![Edit Translator Roles](img/edit_translator_roles.png)
+![Translator Rollerini Düzenle](img/edit_translator_roles.png)
 
-> When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
+> Bir kullanıcıya rol atadığınızda, o role verilmiş olan bütün yetkileri otomatik olarak alır. Kullanıcının yetkilerini düzenleyerek rolden farklı ek yetkiler verebilirsiniz. Ayrıca kullanıcıdan rol yetkilerini almak ta mümkündür.
 
-Now close all dialogs and logout by clicking *admin* on top right of site and clicking *Logout*. 
+Şimdi tüm dialogları kapatıp, sağ üstteki kullanıcı adına tıklayın ve *Logout (Çıkış Yap)* bağlantısına tıklayarak sistemden çıkın. Giriş sayfasına geri döneceksiniz.
 
-Try logging in with *translator* and the password you set.
+Bu sefer *translator* kullanıcısı ve belirlemiş olduğunuz şifre ile giriş yapın.
 
-Translator user will only have access to Dashboard, Theme Samples, Languages and Translations pages.
+Translator kullanıcısı sadece Dashboard, Theme Samples, Languages and Translations sayfalarını görebilecektir. Örneğin Northwind kendisine gözükmeyeecktir.
 
-![Translator Logged In](img/translator_logged_in.png)
+![Translator Giriş Yapmış Durum](img/translator_logged_in.png)
 
 
 
