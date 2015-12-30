@@ -1,4 +1,4 @@
-# Localization
+# Yerelleştirme
 
 Serene allows you to change the active language with a dropdown on top right.
 
