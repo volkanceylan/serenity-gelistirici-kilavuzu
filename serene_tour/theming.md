@@ -1,4 +1,4 @@
-# Theming
+# Temalar
 
 Serene initially starts with a dark theme. On top right of the screen, next to *Theme* label, click the light gray circle and theme will change to a light one.
 
