@@ -2,7 +2,7 @@
 
 * [Giriş](README.md)
 * [Başlangıç](getting_started/README.md)
-   * [Installing Serene From Visual Studio Gallery](getting_started/installing_serene_from_visual_studio_gallery.md)
+   * [Serene'yi Visual Studio Galerisinden Kurmak](getting_started/installing_serene_from_visual_studio_gallery.md)
    * [Installing Serene Directly From Visual Studio](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Starting Serene](getting_started/starting_serene.md)
 * [A Tour Of Serene Features](serene_tour/README.md)
