@@ -20,7 +20,7 @@ Uygulama başladığında, `admin` kullanıcı adı ve `serenity` şifresini kul
 
 ![Giriş Ekranı](img/login_screen.jpg)
 
-Örnek uygulama, Microsoft'tan eski dostumuz Northwind veritabanını ve bu veriler için Serenity Code Generator ile üretilmiş servis ve kullanıcı arayüzlerini içerir.
+Örnek uygulama, Microsoft'tan eski dostumuz Northwind veritabanı ile bu veriler için Serenity Code Generator ile üretilmiş servis ve kullanıcı arayüzlerini içerir.
 
 ### Proje Bağımlılığı (Project Dependency) Tanımlanması
 
