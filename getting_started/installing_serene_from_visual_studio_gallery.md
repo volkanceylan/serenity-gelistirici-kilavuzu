@@ -1,4 +1,4 @@
-# Installing Serene From Visual Studio Gallery
+# Serene'yi Visual Studio Galerisinden Kurmak
 
 Open http://visualstudiogallery.msdn.microsoft.com/ in your browser.
 
