@@ -1,28 +1,28 @@
 # Temalar
 
-Serene initially starts with a dark/blue theme. On top right of the screen, next to username, click the settings button and change theme to another one.
+Serene başlangıçta koyu/mavi bir tema ile görüntülenir. Ekranın sağ üstündeki, kullanıcı adının yanındaki ayarlar simgesine tıklayın ve gelen menüden farklı bir tema seçin.
 
 ![Serene Dashboard Yellow Light](img/serene_dashboard_light.png)
 
-This feature is implemented by replacing a body CSS class.
+Bu özellik BODY tag'i üzerindeki bir CSS sınıfı değiştirilerek sağlanmaktadır.
 
-If you look at the source, you may spot a skin class like below inside `<body>` tag:
+Eğer kaynak kodu incelerseniz, `<body>` tag'i üzerinde aşağıdakine benzer bir skin sınıfını görebilirsiniz:
 
 ```html
 <body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-blue has-layout-event">
 ```
 
-When you select the light yellow skin, it actually changes to this:
+Açık sarı temayı seçtiğinizde, bu tag şu şekilde değişir:
 
 ```html
 <body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-yellow-light has-layout-event">
 ```
 
-This is done in memory so no page reload is required.
+Bu hafızada yapıldığından, sayfanın yeniden yüklenmesine gerek yoktur.
 
-Also cookie, *"ThemePreference"*" with the content *"yellow-light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light yellow theme.
+Bunun yanında, *"ThemePreference"*" adlı *"yellow-light"* içeriğine sahip bir çerez tarayıcınıza eklenir. Yani, Serene'yi tekrar açtığınızda, tema tercihiniz hatırlanacaktır ve yine açık sarı temayla başlanacaktır.
 
-These skin files are located under "Content/adminlte/skins/" of the Serene.Web project. If you look there you can see files with names:
+Bu tema dosyaları Serene.Web projesinin "Content/adminlte/skins/" klasörü altında bulunur. Eğer oraya bakarsanız, şunlara benzer dosya adlarını görebilirsiniz:
 
 ```
 _all-skins.less
@@ -32,9 +32,9 @@ site.yellow-light.less
 site.yellow.less
 ```
 
-We are using LESS for CSS generation so you should try editing LESS files, not CSS. Next time you build your project, LESS files will be compiled to CSS (using *Less.js* compiler for *Node*).
+CSS üretimi için LESS kütüphanesinden faydalanıyoruz, bu nedenle CSS yerine LESS dosyalarını düzenlemelisiniz. Projenizi derlediğinizde, LESS dosyaları CSS dosyalarına çevrilir (*Node* tabanlı *Less.js* derleyicisi ile).
 
-This operation is configured with a build step in Serene.Web.csproj file:
+Bu işlem, Serene.Web.csproj dosyasında bir derleme adımı olarak tanımlanmıştır:
 
 ```xml
 ...
@@ -47,6 +47,6 @@ This operation is configured with a build step in Serene.Web.csproj file:
 ...
 ```
 
-Here *site.less* file is compiled to its corresponding css file in the same directory.
+Burada, *site.less* dosyası, aynı klasördeki karşılık gelen *site.css* dosyasına derlenmektedir.
 
-> See http://lesscss.org/ for more information on LESS compiler and its syntax.
+>  http://lesscss.org/ adresinden LESS derleyicisi ve söz dizilimi (syntax) hakkında daha fazla bilgi edinebilirsiniz.
