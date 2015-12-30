@@ -23,6 +23,10 @@ Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or l
 
 > Please don't name it *Serenity*. It may conflict with other Serenity assemblies.
 
-Click OK and take a break while Visual Studio downloads the template and creates the solution.
+Uygulamanıza *Sirketim*, *Urunum*, *MerhabaDunya* benzeri bir isim verin, ya da varsayılan *Serene1* olarak bırakabilirsiniz.
 
-> After you create your first project, Serene template is installed into Visual Studio, so you can use the *Installed* section in *New Project* dialog to create another Serenity application.
+> Lütfen adını *Serenity* yapmayın. Diğer Serenity kitaplıklarıyla çakışacaktır.
+
+OK (Tamam) a tıklayın ve Visual Studio şablonu indirip, çözümünüzü (solution) oluştururken bir mola verin.
+
+> İlk projenizi oluşturduktan sonra, Serene şablonu Visual Studio ya kurulmuş olacaktır. Bu nedenle daha sonra direk olarak *Installed (Kurulu)* bölümünden bir başka Serenity uygulaması oluşturabilirsiniz.
