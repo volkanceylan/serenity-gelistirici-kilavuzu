@@ -6,7 +6,7 @@ Visual Studio'ya *SERENE* şablonunu kurmak için iki seçeneğiniz bulunmaktad�
 
 * [SERENE'yi Visual Studio Galerisinden Kurmak](installing_serene_from_visual_studio_gallery.md)
 
-* [SERENE'yi direk olarak Visual Studio İçinden Kurmak](installing_serene_directly_from_visual_studio.md)
+* [SERENE'yi Direk Visual Studio İçinden Kurmak](installing_serene_directly_from_visual_studio.md)
 
 > Serenity ile çalışmak için bu şablonu kullanmak bir zorunluluk değildir. 
 
