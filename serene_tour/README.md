@@ -1,6 +1,6 @@
 # Ufak Bir Serene Turu
 
-After logging to Serene, you are greeted with the dashboard page.
+Serene'ye giriş yaptıktan hemen sonra, gösterge (dashboard) sayfasıyla karşılanırsınız.
 
 ![Serene Dashboard](img/serene_dashboard.jpg)
 
