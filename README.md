@@ -1,5 +1,6 @@
 # Giriş
 
+
 ## Serenity Platformu Nedir?
 
 Serenity, açık kaynak teknolojiler üzerine inşaa edilmiş bir ASP.NET MVC / Javascript uygulama platformudur.
