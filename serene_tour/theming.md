@@ -1,6 +1,6 @@
 # Temalar
 
-Serene başlangıçta koyu/mavi bir tema ile görüntülenir. Ekranın sağ üstündeki, kullanıcı adının yanındaki ayarlar simgesine tıklayın ve gelen menüden farklı bir tema seçin.
+Serene başlangıçta koyu/mavi bir tema ile görüntülenir. Ekranın sağ üstündeki, kullanıcı adının yanındaki ayarlar <i class="fa fa-gears"/> simgesine tıklayın ve gelen menüden farklı bir tema seçin.
 
 ![Serene Dashboard Yellow Light](img/serene_dashboard_light.png)
 
