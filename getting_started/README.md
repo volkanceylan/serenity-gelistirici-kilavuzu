@@ -1,6 +1,6 @@
 # Başlangıç
 
-Serenity ile çalışmaya örnek uygulama şablonu olan *SERENE*'yi kullanarak en kolay ve hızlı şekilde başlayabilirsiniz.
+Serenity ile çalışmaya, en kolay ve çabuk şekilde, örnek uygulama şablonu olan *SERENE*'yi kullanarak başlayabilirsiniz.
 
 Visual Studio'ya *SERENE* şablonunu kurmak için iki seçeneğiniz bulunmaktadır:
 
