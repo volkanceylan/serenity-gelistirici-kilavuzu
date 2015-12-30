@@ -1,6 +1,6 @@
-# Installing Serene Directly From Visual Studio
+# Serene'yi Direk Visual Studio İçinden Kurmak
 
-Start Visual Studio and Click *New => Project*.
+Visual Studio'yu başlatın ve  *New => Project (Yeni => Proje)* ye tıklayın.
 
 > Note that this application template requires Visual Studio 2012 or higher. Make sure you have the latest Visual Studio updates installed.
 
