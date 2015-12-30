@@ -4,7 +4,7 @@ Serene'ye giriş yaptıktan hemen sonra, gösterge (dashboard) sayfasıyla karş
 
 ![Serene Dashboard](img/serene_dashboard.png)
 
-Bu sayfa ücretsiz [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index.html) temasından örnek alınmıştır. 
+> Bu sayfa ücretsiz [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index.html) temasından örnek alınmıştır. 
 
 Sayfadaki içerik, üst bölümdeki Northwind tablolarından beslenen birkaç sayısal değer hariç, rastgele verilerden oluşmaktadır.
 
