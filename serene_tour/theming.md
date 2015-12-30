@@ -9,13 +9,15 @@ Bu özellik BODY tag'i üzerindeki bir CSS sınıfı değiştirilerek sağlanmak
 Eğer kaynak kodu incelerseniz, `<body>` tag'i üzerinde aşağıdakine benzer bir skin sınıfını görebilirsiniz:
 
 ```html
-<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-blue has-layout-event">
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition 
+    skin-blue has-layout-event">
 ```
 
 Açık sarı temayı seçtiğinizde, bu tag şu şekilde değişir:
 
 ```html
-<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-yellow-light has-layout-event">
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition 
+    skin-yellow-light has-layout-event">
 ```
 
 Bu hafızada yapıldığından, sayfanın yeniden yüklenmesine gerek yoktur.
