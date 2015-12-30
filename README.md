@@ -23,7 +23,7 @@ Bu kılavızı ve öğreticilerini okuduktan sonra daha fazla bilgi için aşağ
   <dt>Github Kod Deposu:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity'>https://github.com/volkanceylan/Serenity</a></dd>
 
-  <dt>Problemleriniz / Sorularınız İçin</dt>
+  <dt>Problemleriniz, Öneri ve Sorularınız İçin</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity/issues'>https://github.com/volkanceylan/Serenity/issues</a></dd>
   
   <dt>Değişiklik Kütüğü:</dt>
