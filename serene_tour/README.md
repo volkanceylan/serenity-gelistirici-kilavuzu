@@ -1,4 +1,4 @@
-# Serene Özelliklerinde Kısa Bir Tur
+# Serene Özelliklerine Kısa Bir Tur
 
 After logging to Serene, you are greeted with the dashboard page.
 
