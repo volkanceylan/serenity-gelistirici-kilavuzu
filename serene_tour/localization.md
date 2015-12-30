@@ -2,7 +2,7 @@
 
 Serene, etkin arayüz dilini sağ üstteki ayarlar <i class="fa fa-gears"></i> menüsünden değiştirmenize izin verir.
 
-Try changing active language to Spanish.
+Aktif dili ispanyolcaya (spanish) çevirmeyi deneyin.
 
 ![Serene Dashboard Spanish](img/serene_customers_spanish.png)
 
