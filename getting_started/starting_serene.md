@@ -1,6 +1,6 @@
 # Serene'nin Başlatılması
 
-After your first project is created in Visual Studio using Serene template, you will see a solution like this:
+Serene şablonu kullanan projeniz Visual Studio'da oluşturulduktan sonra şuna benzer bir solution görürsünüz:
 
 ![Initial Solution Content](img/initial_solution_content.jpg)
 
