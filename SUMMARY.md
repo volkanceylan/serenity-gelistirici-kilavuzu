@@ -1,4 +1,4 @@
-# Summary
+# İçindekiler
 
 * [Giriş](README.md)
 * [Başlangıç](getting_started/README.md)
