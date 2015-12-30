@@ -32,22 +32,20 @@ Ancak Visual Studio, varsayılan olarak, sadece başlangıç projesi olan *Seren
 
 Script projesinin de, Web projesi çalıştırıldığında derlenmesi için, *Serene1.Web* projesine sağ tuşla tıklayın, *Build Dependencies -> Project Dependencies* menüsüne girip, *Dependencies* altındaki *Serene1.Script* i işaretleyin.
 
-Bu ayarlamayı yapmadığınız taktirde, ileride kod üretip, script projesini derlemeden F5 e basarsanız, tarayıcınızda bazı script hatalarıyla karşılaşabilirsiniz.
+Bu ayarlamayı yapmadığınız taktirde, ileride Sergen ile kod üretip, script projesini derlemeden F5 e basarsanız, tarayıcınızda bazı script hatalarıyla karşılaşabilirsiniz.
 
 > Malesef Serene şablonunda bu bağımlılığı bizim ayarlayabilmemiz şu an için mümkün değil.
 
 ### Bağlantı Sorunlarını Gidermek
 
-If you are getting a connection error like the following while starting Serene for first time:
+Eğer Serene'yi ilk çalıştırdığınızda şuna benzer bir hata alıyorsanız:
 
 > A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. The specified LocalDB instance does not exist.
 )
 
+Bu hata sisteminizde SQL Server Local DB 2012 nin kurulu olmadığını anlamına gelebilir. Bu sunucu Visual Studio 2012 and 2013 ile birlikte önyüklü olarak gelir. 
 
-
-This error might mean that you don't have SQL Server Local DB 2012 installed. This server comes preinstalled with Visual Studio 2012 and 2013. 
-
-In Serene.Web/web.config file there are *Default* and *Northwind* connection entries:
+Serene.Web/web.config dosyasında *Default* ve *Northwind* bağlantıları bulunmaktadır:
 
 ```xml
 <connectionStrings>
@@ -57,13 +55,13 @@ In Serene.Web/web.config file there are *Default* and *Northwind* connection ent
   </connectionStrings>
 ```
 
-`(localdb)\v11.0` corresponds to default SQL Server 2012 LocalDB instance.
+`(localdb)\v11.0` SQL Server 2012 LocalDB'nin varsayılan örneğidir. (instance).
 
-If you don't have SQL LocalDB 2012, you can install it from:
+Eğer SQL LocalDB 2012 ye sahip değilseniz, şu adresten kurabilirsiniz:
 
 http://www.microsoft.com/en-us/download/details.aspx?id=29062
 
-Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance name is renamed to MsSqlLocalDB by default. Thus, if you have VS2015, try changing connection strings from `(localdb)\v11.0` to `(localdb)\MsSqlLocalDB`.
+Visual Studio 2015, SQL Server 2014 LocalDB ile birlikte gelmektedir. Bu sürümün varsayılan örneği (instance) ise MsSqlLocalDB olarak değiştirilmiştir. Bu nedenle, eğer VS2015'iniz varsa, sunucu adresini `(localdb)\v11.0` den `(localdb)\MsSqlLocalDB` ye değiştirmeyi deneyin:
 
 ```xml
 <connectionStrings>
@@ -73,27 +71,27 @@ Visual Studio 2015 comes with SQL Server 2014 LocalDB. It's default instance nam
   </connectionStrings>
 ```
 
-If you still have an error, open an administrative command prompt and type
+Eğer hala hata alıyorsanız, yönetici olarak bir komut satırı açın ve aşağıdaki komutu yazın:
 
 ```bat
 > sqllocaldb info
 ```
 
-This will list localdb instances like:
+Bu mevcut local db örneklerinin bir listesini görüntüleyecektir:
 
 ```
 MSSqlLocalDB
 test
 ```
 
-If you don't have MsSqlLocalDB listed, you can create it:
+Eğer MsSqlLocalDB listelenmezse, şu şekilde oluşturabilirsiniz:
 
 ```bat
 > sqllocaldb create MsSqlLocalDB
 ```
 
 
-If you have another SQL server instance, for example SQL Express, change data source to `.\SqlExpress`:
+Eğer başka bir SQL server tipinde sunucunuz varsa, mesela SQL Express, veri kaynağını `.\SqlExpress` olarak değiştirin:
 
 
 ```xml
@@ -104,7 +102,6 @@ If you have another SQL server instance, for example SQL Express, change data so
   </connectionStrings>
 ```
 
+Başka bir sunucudaki SQL server'ı da kullanabilirsiniz. Sadece bağlantı dizesini uygun şekilde düzenleyin.
 
-You can also use another SQL server. Just change the connection string.
-
-> Perform these steps for both Default and Northwind databases. Serene 1.6.4.3+ creates two databases.
+> Bu adımları hem Default, hem de Northwind bağlantıları için tekrarlayın. Serene 1.6.4.3+ sürümleri iki ayrı veritabanı oluşturur.
