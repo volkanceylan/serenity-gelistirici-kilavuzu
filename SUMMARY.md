@@ -6,7 +6,7 @@
    * [Serene'nin Direk Visual Studio İçinden Kurulumu](getting_started/installing_serene_directly_from_visual_studio.md)
    * [Serene'nin Başlatılması](getting_started/starting_serene.md)
 * [Ufak Bir Serene Turu](serene_tour/README.md)
-   * [Theming](serene_tour/theming.md)
+   * [Temalar](serene_tour/theming.md)
    * [Localization](serene_tour/localization.md)
    * [User and Role Management](serene_tour/user_and_role_management.md)
    * [Listing Pages](serene_tour/listing_pages.md)
