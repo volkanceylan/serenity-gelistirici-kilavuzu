@@ -2,14 +2,15 @@
 
 Serene'ye giriş yaptıktan hemen sonra, gösterge (dashboard) sayfasıyla karşılanırsınız.
 
-![Serene Dashboard](img/serene_dashboard.jpg)
+![Serene Dashboard](img/serene_dashboard.png)
 
-There is not much interesting content here yet, but you would choose to customize this page with some news, graphics etc.
+Bu sayfa ücretsiz [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index.html) temasından örnek alınmıştır. 
 
-There is an accordion navigation menu on left which has a search feature by input above it. We'll talk about how to customize items there in later sections.
+Sayfadaki içerik, üst bölümdeki Northwind tablolarından beslenen birkaç sayısal değer hariç, rastgele verilerden oluşmaktadır.
 
-On top navigation, we have a theme selection option to change active language and a dropdown that displays current username.
+Sol tarafta, üst kısmındaki giriş kutusundan arama özelliği olan bir navigasyon menüsü bulunur. Bu bölümdeki bağlantıları nasıl özelleştirebileceğimize daha sonra değineceğiz.
 
+Üst navigasyonda, site ismi, giriş yapmış kullanıcının adı ve tema / dil seçeneklerine erişebileceğimiz bir ayarlar butonu bulunmakta.
 
 * [Theming](theming.md)
 * [Localization](localization.md)
