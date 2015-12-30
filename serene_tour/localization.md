@@ -1,63 +1,62 @@
 # Yerelleştirme
 
-Serene allows you to change the active language from top right settings menu <i class="fa fa-gears"></i>.
+Serene, etkin arayüz dilini sağ üstteki ayarlar <i class="fa fa-gears"></i> menüsünden değiştirmenize izin verir.
 
 Try changing active language to Spanish.
 
 ![Serene Dashboard Spanish](img/serene_customers_spanish.png)
 
-> I don't speak Spanish and used machine translation, so sorry for errors...
+> İspanyolcam olmadığından makina çevirisi kullandım, hatalar için kusura bakmayın...
 
-When you changed the language, page is reloaded, unlike the theme selection where no page reload is required.
+Dili değiştirdiğinizde, temadaki durumdan farklı olarak, sayfa yeniden yüklendi.
 
-Serene, also added a cookie, *"LanguagePreference"* with content *"es"* to your browser, so next time you visit the site, it will remember your last selection and start with Spanish.
+Serene, bu sırada *"LanguagePreference"* adlı *"es"* içerikli bir çerezi tarayıcınıza ekledi. Bu sayede, siteyi tekrar ziyaret ettiğinizde, son dil tercihiniz saklanır ve sayfa ispanyolca olarak açılır.
 
-When you launched Serene first time, you might have seen the site in English, but it is also possible that it started in Spanish, Turkish or Russian (these are currently available sample languages) if you have an operating system or browser of that language.
+Serene'yi ilk başlattığınızda, sayfayı muhtemelen ingilizce olarak gördünüz, fakat ispanyolca, türkçe ya da rusça da görmüş olabilirsiniz (bunlar şu an mevcut olan örnek diller), eğer işletim sisteminiz ya da tarayıcınız bu dillerden birine ayarlanmışsa.
 
-This is controlled by a web.config setting:
+Bu özellik bir web.config ayarıyla kontrol edilmektedir:
 
 ```xml
 <globalization culture="en-US" uiCulture="auto:en-US" />
 ```
 
-Here we set UI culture to automatic, while en-US is a fallback (if system can't determine your browser language).
+Burada arayüz kültürü (uiCulture - metinlerin gözüktüğü dil) otomatiğe ayarlanmış. Eğer sistem tarayıcı dilinizi tespit edemezse, son çare (fallback) olarak en-US tercih edilmesi ayarlanmış.
 
-It is also possible to set another language as fallback:
+Başka bir dili, mesela türkçeyi fallback olarak kullanmanız da mümkün:
 
 ```xml
 <globalization culture="en-US" uiCulture="auto:tr-TR" />
 ```
 
-Or set a language as default, whatever visiting users browser language is:
+Ya da ziyaretçilerinizin tarayıcı dili ne olursa olsun, belli bir dille başlamasını sağlayabilirsiniz:
 
 ```xml
 <globalization culture="en-US" uiCulture="es" />
 ```
 
-> If you don't want to let users to change UI language, you should remove the language selection dropdown.
+> Eğer kullancılarınızın dil değiştirmesini istemiyorsanız, dil seçim menüsünü kaldırmalısınız.
 
-> You may add more languages to the language selection dropdown by using Languages page under Administration menu.
+> Dil seçim menüsüne daha *Administration / Languages (Sistem Yönetimi / Diller)* sayfasından başka diller de ekleyebilirsiniz.
 
+## Arayüz Metinlerinin Yerelleştirilmesi
 
-## Localizing UI Texts
+Serene, metin kaynaklarının kendi üzerinden canlı olarak yerelleştirilmesine imkan tanır.
 
-Serene includes ability to translate its text resources live.
-
-Click *Administration* then *Translations* link in navigation.
+Navigasyondan, önce *Administration (Sistem Yönetimi)*, sonra *Translations (Çeviriler)* bağlantısına tıklayınız. 
 
 ![](img/translation_navigation_texts.png)
 
-Type *navigation* into top left search box to see list of texts related to navigation menu. Choose *English* as source language and *Spanish* as target language.
+Sol üstteki arama kutusuna *navigation* yazarak, navigasyon menüsüyle ilgili metinlerin süzülmesini sağlayın. Kaynak dil (source language) olarak *English*, ve hedef dil (target language) olarak da *Spanish* seçin.
 
-Type *Welcome Page* into line with *Navigation.Dashboard* local text key.
+*Navigation.Dashboard* yerel metin anahtarının (local text key) gösterildiği satıra *Welcome Page* yazın.
 
-Click *Save Changes*.
+*Save Changes (değişiklikleri kaydet)* e tıklayın.
 
-When you switch to Spanish language, Dashboard menu item will be changed to *Welcome Page* instead of *Salpicadero*.
+İspanyolca diline geçiş yaptığınızda, daha önce *Salpicadero* olarak gösterilen gösterge menüsünün başlığının *Welcome Page* olarak değiştiğini göreceksiniz.
 
 ![](img/translation_navigation_welcome.png)
 
-When you saved changes, Serene created a `user.texts.es.json` file in folder `App_Data/texts` with content like below:
+Değişiklikleri kaydettiğinizde, Serene `App_Data/texts` klasörü altında `user.texts.es.json` adlı, aşağıdaki içeriğe sahip bir dosya oluşturdu:
 
 ```json
 {
@@ -65,10 +64,10 @@ When you saved changes, Serene created a `user.texts.es.json` file in folder `Ap
 }
 ```
 
-In the `~/scripts/site/texts` folder, there are also other similar JSON files with default translations for Serene interface:
+Serene1.Web projesinin altındaki `~/scripts/site/texts` klasöründe, Serene arayüzü için varsayılan yerelleştirmeleri içeren benzer içerikli dosyalar bulunmaktadır:
 
 - site.texts.es.json
 - site.texts.invariant.json
 - site.texts.tr.json
 
-> It is recommended to transfer your translations from user.texts.xx.json files to site.texts.xx.json files before publishing. You can also keep them under version control this way, if App_Data folder is ignored.
+> Sitenizi yayına almadan önce, App_Data altındaki user.texts.xx.json dosyalarındaki metinleri site.texts.xx.json dosyalarına transfer etmeniz önerilir. Bu şekilde, eğer App_Data klasörünü ignore ettiyseniz, yerelleştirmelerinizi versiyon kontrol sisteminde tutabilirsiniz. Ayrıca canlıya sürüm atmanız da daha kolay olacaktır.
