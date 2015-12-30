@@ -1,4 +1,4 @@
-# Starting Serene
+# Serene'nin Başlatılması
 
 After your first project is created in Visual Studio using Serene template, you will see a solution like this:
 
