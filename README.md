@@ -1,74 +1,74 @@
-# Introduction
+# Giriş
 
-## What is Serenity Platform
+## Serenity Platformu Nedir?
 
-Serenity is an ASP.NET MVC / Javascript application platform which has been built on open source technologies.
+Serenity, açık kaynak teknolojiler üzerine inşaa edilmiş bir ASP.NET MVC / Javascript uygulama platformudur.
 
-It aims to make development easier while reducing maintenance costs by avoiding boiler-plate code, reducing the time spent on repetitive tasks and applying the best software design practices.
-
-
-## Who/What This Platform Is For
-
-Serenity is best suited to business applications with many data entry forms or administrative interface of public facing web sites.
-
-This doesn't mean that it can't be used for other types of applications. Some features, like script versioning/bundling, caching, code generation, fluent sql builders etc. can be helpful for any kind of application.
+Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en iyi yazalım tasarım desenlerini uygulama felsefelerini takip ederek yazılım geliştirmeyi kolaylaştırmayı hedefler.
 
 
-## Where To Look For Information
+## Bu Platform Kimler ve Ne İçin?
 
-After reading this guide and its tutorials, follow resources below for more information about Serenity.
+Serenity, birçok veri giriş ekranından oluşan iş uygulamaları ya da dışarı açık web sitelerinin yönetim arayüzlerine yönelik tasarlanmıştır.
+
+Bu başka uygulama tipleri için kullanılamayacağı anlamına gelmez tabi ki. Script versiyonlama, paketleme, önbellekleme, kod üretimi, akıcı sql oluşturucular gibi birçok özelliği her türlü uygulama için faydalı olabilir.
+
+
+## Serenity ile İlgili Bilgi Kaynakları
+
+Bu kılavızı ve öğreticilerini okuduktan sonra daha fazla bilgi için aşağıdaki kaynaklardan faydalanabilirsiniz.
 
 <dl>
 
-  <dt>Github Repository:</dt>
+  <dt>Github Kod Deposu:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity'>https://github.com/volkanceylan/Serenity</a></dd>
 
-  <dt>Issues / Questions</dt>
+  <dt>Problemleriniz / Sorularınız İçin</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity/issues'>https://github.com/volkanceylan/Serenity/issues</a></dd>
   
-  <dt>Change Log:</dt>
+  <dt>Değişiklik Kütüğü:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md'>https://github.com/volkanceylan/Serenity/blob/master/CHANGELOG.md</a></dd>
 
-  <dt>Serene Application Template:</dt>
+  <dt>Serene Örnek Uygulama Şablonu:</dt>
   <dd><a href='https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681'>https://visualstudiogallery.msdn.microsoft.com/559ec6fc-feef-4077-b6d5-5a99408a6681</a></dd>
 
-  <dt>Tutorial / Sample Source Code:</dt>
+  <dt>Öğreticiler İçin Örnek Kaynak Kodları:</dt>
   <dd><a href='https://github.com/volkanceylan/Serenity-Tutorials'>https://github.com/volkanceylan/Serenity-Tutorials</a></dd>
 
 
 </dl>
 
 
-## What's In The Name
+## İsmi Ne Anlama Geliyor?
 
-Serenity has dictionary meanings of *peace*, *comfort* and *calmness*.
+Serenity'nin sözlük manasına baktığınızda huzur, rahatlık ve sakinlik kelimelerini bulursunuz.
 
-This is what we are trying to achieve with Serenity. We hope that after installing and using it you will feel this way too...
+Bunlar bizim Serenity'yi geliştirirken hedeflediklerimizle örtüşen kavramlar. Umarız, Serenity'yi kurup kullanmaya başladıktan sonra siz de bu şekilde hissedersiniz...
 
-## What Features It Provides
+## Sağladığı Özelliklerden Bazıları
 
-* A modular, service based web application model
-* Code generator to produce initial services / user interface code for an SQL table
-* T4 based code generation on server to reference script widgets with intellisense / compile time validation
-* T4 based code generation to provide compile time type safety and intellisense while calling AJAX services from script side.
-* An attribute based form definition system (prepare UI in server side with a simple C# class)
-* Automatic seamless data-binding through form definitions (form <-> entity <-> service).
-* Caching Helpers (Local / Distributed)
-* Automatic cache validation
-* Configuration System (storage medium independent. store settings in database, file, whatever...)
-* Simple Logging
-* Reporting (reports just provide data, has no dependency on rendering, similar to MVC)
-* Script bundling, minification (making use of Node / UglifyJS / CleanCSS) and content versioning (no more F5 / clear browser cache)
-* Fluent SQL Builder (SELECT/INSERT/UPDATE/DELETE)
-* Micro ORM (also Dapper is integrated)
-* Customizable handlers for REST like services that work by reusing information in entity classes and do automatic validation.
-* Attribute based navigation menu
-* UI Localization (store localized texts in json files, embedded resource, database, in memory class, anywhere)
-* Data Localization (using an extension table mechanism helps to localize even data entered by users,  like lookup tables)
-* Script widget system (inspired by jQueryUI but more suitable for C# code)
-* Client side and server side validation (based on jQuery validate plugin, but abstracts dependency)
-* Audit logging (where CDC is not available)
-* System for data based integration tests
-* Dynamic scripts
-* Script side templates
+* Modüler, servis tabanlı bir web uygulama modeli
+* İstenen SQL tablosu için başlangıç amaçlı servis ve kullanıcı arayüzü kodlarını üreten bir yardımcı uygulama (Sergen)
+* Sunucu tarafında T4 tabanlı kod üretimiyle, script tarafındaki bileşenlere (widget) intellisense / derleme zamanı kontrol desteğiyle erişim.
+* Script tarafından AJAX servislerine erişirken yine intellisense ve derleme zamanı kontrol sağlamak için T4 tabanlı kod üretimi.
+* Nitelik (attribute) tabanlı form yapısı. Arayüz sunucu tarafında basic bir C# sınıfı ile tasarlanır.
+* Form, entity ve servis arasında, otomatik, ek işlem gerektirmeyen veri bağlama (data-binding).
+* Önbellekleme Yardımcıları (Yerel / Dağıtık)
+* Otomatik önbellek validasyonu
+* Konfigürasyon Sistemi (saklama ortamı bağımsız. ayarlar, veritabanı, dosya gibi herhangi bir yerde tutulabilir)
+* Basit Loglama
+* Raporlama (raporlar sadece veri kaynağıdır, gösterime hiçbir bağımlılıkları yoktur, bu yönüyle MVC ye benzer)
+* Script paketleme, küçültme (Node / UglifyJS / CleanCSS kütüphanelerini kullanarak) ve içerik versiyonlama (sürekli F5 / tarayıcı önbelleği temizlemeye gerek yok)
+* Akıcı SQL Üretici (SELECT/INSERT/UPDATE/DELETE)
+* Micro ORM (Dapper da entegre edilmiştir)
+* REST benzeri servisler için özelleştirilebilir işleyiciler, entity sınıflarındaki bilgiyi kullanarak çalışır ve otomatik validasyon yapar.
+* Nitelik (attribute) tabanlı navigasyon menüsü
+* Arayüz Yerelleştirme (yerelleştirilmiş metinler json, entegre kaynak (resource), veritabanı gibi farklı yerlerde tutulabilir)
+* Veri Yerelleştirme (özel bir uzantı tablosu yapısıyla, referans tabloları gibi, kullanıcı tarafından girilen veriler de yerelleştirilebilir)
+* Script bileşen sistemi (jQueryUI'dan ilham alınıp C#'a uygun düzenlenmiş bir yapı)
+* İstemci ve sunucu tarafı doğrulama (validation). jQuery validate plugini kullanır ancak bağımlılık soyutlanır)
+* Kayıt tarihçesi kütüğü (CDC kullanılamadığında)
+* Veri yönelimli testler için özel sistem
+* Dinamik, sanal script dosyaları
+* İstemci tarafı HTML şablonları
 
