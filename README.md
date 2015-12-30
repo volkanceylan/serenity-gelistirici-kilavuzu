@@ -7,7 +7,7 @@ Serenity, açık kaynak teknolojiler üzerine inşaa edilmiş bir ASP.NET MVC / 
 Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en iyi yazılım tasarım desenlerini takip ederek uygulama geliştirmeyi kolaylaştırmayı hedefler.
 
 
-## Bu Platform Kimler ve Ne İçin?
+## Bu Platform Kim ve Ne İçin?
 
 Serenity, birçok veri giriş ekranından oluşan iş uygulamaları ya da dışarı açık web sitelerinin yönetim arayüzleri için biçilmiş kaftandır.
 
@@ -60,7 +60,7 @@ Bunlar bizim Serenity'yi geliştirirken hedeflediklerimizle örtüşen kavramlar
 * Raporlama (raporlar sadece veri kaynağıdır, gösterime hiçbir bağımlılıkları yoktur, bu yönüyle MVC ye benzer)
 * Script paketleme, küçültme (Node / UglifyJS / CleanCSS kütüphanelerini kullanarak) ve içerik versiyonlama (sürekli F5 / tarayıcı önbelleği temizlemeye gerek yok)
 * Akıcı SQL Üretici (SELECT/INSERT/UPDATE/DELETE)
-* Micro ORM (Dapper da entegre edilmiştir)
+*Micro ORM (Dapper da entegre edilmiştir)
 * REST benzeri servisler için özelleştirilebilir işleyiciler, entity sınıflarındaki bilgiyi kullanarak çalışır ve otomatik validasyon yapar.
 * Nitelik (attribute) tabanlı navigasyon menüsü
 * Arayüz Yerelleştirme (yerelleştirilmiş metinler json, entegre kaynak (resource), veritabanı gibi farklı yerlerde tutulabilir)
