@@ -1,4 +1,4 @@
-# Kısa Bir Serene Turu
+# Ufak Bir Serene Turu
 
 After logging to Serene, you are greeted with the dashboard page.
 
