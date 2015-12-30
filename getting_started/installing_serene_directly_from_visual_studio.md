@@ -1,4 +1,4 @@
-# Serene'yi Direk Visual Studio İçinden Kurmak
+# Serene'nin Direk Visual Studio İçinden Kurulumu
 
 Visual Studio'yu başlatın ve  *New => Project (Yeni => Proje)* ye tıklayın.
 
