@@ -6,7 +6,7 @@ Visual Studio'yu başlatın ve  *New => Project (Yeni => Proje)* ye tıklayın.
 
 Yeni Proje diyaloğunda *Recent (Güncel)*, *Installed (Kurulu)* ve *Online (Çevrimiçi)* bölümleri solda görüntülenir ve *Installed* aktif olarak gelir.
 
-Click the *Online (Çevrimiçi)* bölümüne tıklayın ve *Retrieving information (Bilgiler alınıyor)* mesajı ekrandayken bekleyin.
+*Online (Çevrimiçi)* bölümüne tıklayın ve *Retrieving information (Bilgiler alınıyor)* mesajı ekrandayken bekleyin.
 
 > Sonuçları yüklerken lütfen bekleyiniz.
 
