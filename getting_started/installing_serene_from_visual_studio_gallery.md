@@ -1,37 +1,35 @@
 # Serene'yi Visual Studio Galerisinden Kurmak
 
-Open http://visualstudiogallery.msdn.microsoft.com/ in your browser.
+Tarayıcınızda http://visualstudiogallery.msdn.microsoft.com/ adresini açın.
 
-Type *Serene* into the search input with *Search the Visual Studio Gallery* label and press ENTER.
+*Search the Visual Studio Gallery* (Visual Studio Galerisinde Ara) başlıklı kutuya *SERENE* yazın.
 
 ![Visual Studio Gallery](img/visual_studio_gallery.jpg)
 
 
-You will see *Serene (Serenity Application Template)*, click to open it.
+*Serene (Serenity Application Template)* öğesini göreceksiniz, tıklayıp açın.
 
-![Visual Studio Search Result](img/visual_studio_gallery_search_result.jpg)
-
-
-Click *Download* to transfer VSIX file to your computer.
-
-![Visual Studio Gallery Download](img/visual_studio_gallery_download.jpg)
+![Visual Studio Arama Sonucu](img/visual_studio_gallery_search_result.jpg)
 
 
-After download is finished, click the downloaded VSIX file to start Visual Studio extension installation dialog and click Install.
+*Download* (İndir) a tıklayarak VSIX dosyasını bilgisayarınıza transfer edin.
 
-![VSIX Installation](img/vsix_installation.jpg)
-
-> Note that this application template requires Visual Studio 2012 or higher. Make you sure you have the latest Visual Studio updates installed.
+![Visual Studio Galerisi İndirme](img/visual_studio_gallery_download.jpg)
 
 
-Start Visual Studio (if it was already open, restart it). Click File => New Project. You should see Serenity template under Templates => Visual C# section.
+İndirme işlemi sonlandığında, VSIX dosyasına tıklayarak Visual Studio uzantı yükleme diyaloğunun açılmasını bekleyin ve Install (Kur) a tıklayın.
 
-![VSIX New Project](img/vsix_new_project.jpg)
+![VSIX Kurulumu](img/vsix_installation.jpg)
 
+> Bu uygulama şablonu Visual Studio 2012 ve sonrasını gerektirir. Lütfen, sorun yaşamamak için en son Visual Studio güncellemelerini yüklediğinizden emin olunuz.
 
-Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.
+Visual Studio'yu yeniden başlatın. File => New Project (Dosya => Yeni Proje)'ye tıklayın. Serenity şablonunu Templates => Visual C# (Şablonlar => Visual C#) bölümü altında görmelisiniz.
 
-> Please don't name it *Serenity*. It may conflict with other Serenity assemblies.
+![VSIX Yeni Proje](img/vsix_new_project.jpg)
 
-Click OK and take a break while Visual Studio creates the solution.
+Uygulamanıza *Sirketim*, *Urunum*, *MerhabaDunya* benzeri bir isim verin, ya da varsayılan *Serene1* olarak bırakabilirsiniz.
+
+> Lütfen adını *Serenity* yapmayın. Diğer Serenity kitaplıklarıyla çakışacaktır.
+
+OK (Tamam) a tıklayın ve Visual Studio çözümünüzü (solution) oluştururken bir mola verin.
 
