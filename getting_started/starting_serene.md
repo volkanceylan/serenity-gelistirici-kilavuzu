@@ -16,9 +16,9 @@ Her iki proje de ilgili Serenity NuGet paketlerine referans içermektedir. Yani 
 
 Serene ilk açılışta ihtiyaç duyduğu veritabanlarını SQL Local DB'de (Visual Studio ile gelen entegre bir SQL sunucu) oluşturur. Yani F5'e basmanız uygulamanın çalışması için yeterlidir, herhangi bir ayar yapmanız gerekmez.
 
-Uygulama başladığında, `admin` kullanıcı adı ve `serenity` şifresini kullanarak giri yapabilirsiniz. Daha sonra, *Administration / User Management (Yönetim / Kullanıcı Yönetimi)* bölümünden bu şifreyi değiştirebilir ya da farklı kullanıcılar oluşturabilirsiniz.
+Uygulama başladığında, `admin` kullanıcı adı ve `serenity` şifresini kullanarak giriş yapabilirsiniz. Daha sonra, *Administration / User Management (Yönetim / Kullanıcı Yönetimi)* bölümünden bu şifreyi değiştirebilir ya da farklı kullanıcılar oluşturabilirsiniz.
 
-![Login Screen](img/login_screen.jpg)
+![Giriş Ekranı](img/login_screen.jpg)
 
 The sample application includes old and famous Northwind data along with services and user interface to edit it, which is mostly produced by Serenity Code Generator.
 
