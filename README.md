@@ -4,7 +4,7 @@
 
 Serenity, açık kaynak teknolojiler üzerine inşaa edilmiş bir ASP.NET MVC / Javascript uygulama platformudur.
 
-Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en iyi yazalım tasarım desenlerini uygulama felsefelerini takip ederek yazılım geliştirmeyi kolaylaştırmayı hedefler.
+Spagetti kodlardan uzak durma, tekrarlı işlerde harcanan süreyi azaltma ve en iyi yazalım tasarım desenlerini takip ederek yazılım geliştirmeyi kolaylaştırmayı hedefler.
 
 
 ## Bu Platform Kimler ve Ne İçin?
