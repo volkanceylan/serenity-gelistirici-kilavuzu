@@ -1,36 +1,35 @@
 # Temalar
 
-Serene initially starts with a dark theme. On top right of the screen, next to *Theme* label, click the light gray circle and theme will change to a light one.
+Serene initially starts with a dark/blue theme. On top right of the screen, next to username, click the settings button and change theme to another one.
 
-![Serene Dashboard Light](img/serene_dashboard_light.jpg)
+![Serene Dashboard Yellow Light](img/serene_dashboard_light.png)
 
-This feature is implemented by replacing HREF of a CSS stylesheet resource in the page.
+This feature is implemented by replacing a body CSS class.
 
-If you look at the source, you may spot a stylesheet link like below inside `<head>` section:
+If you look at the source, you may spot a skin class like below inside `<body>` tag:
 
 ```html
-<link id="SiteThemeCss" href="/Content/site/site.theme.default.css"
-    rel="stylesheet" type="text/css" />
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-blue has-layout-event">
 ```
 
-When you click the lighter circle, it actually changes to this:
+When you select the light yellow skin, it actually changes to this:
 
 ```html
-<link id="SiteThemeCss" href="/Content/site/site.theme.light.css"
-    rel="stylesheet" type="text/css" />
+<body id="s-DashboardPage" class="fixed sidebar-mini hold-transition skin-yellow-light has-layout-event">
 ```
 
 This is done in memory so no page reload is required.
 
-Also cookie, *"ThemePreference"*" with the content *"light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light theme.
+Also cookie, *"ThemePreference"*" with the content *"yellow-light"* is added to your browser. So next time you launch Serene, it will remember your preference and start with a light yellow theme.
 
-These theme files are located under "Content/site/" of the Serene.Web project. If you look there you can see files with names:
+These skin files are located under "Content/adminlte/skins/" of the Serene.Web project. If you look there you can see files with names:
 
 ```
-site.theme.default.less
-site.theme.default.css
-site.theme.light.less
-site.theme.light.css
+_all-skins.less
+skin.black-light.less
+site.blue.less
+site.yellow-light.less
+site.yellow.less
 ```
 
 We are using LESS for CSS generation so you should try editing LESS files, not CSS. Next time you build your project, LESS files will be compiled to CSS (using *Less.js* compiler for *Node*).
@@ -44,18 +43,10 @@ This operation is configured with a build step in Serene.Web.csproj file:
         &quot;$(ProjectDir)Content\site\site.less&quot; &gt;
         &quot;$(ProjectDir)Content\site\site.css&quot;">
     </Exec>
-    <Exec Command="&quot;$(ProjectDir)tools\node\lessc.cmd&quot;
-        &quot;$(ProjectDir)Content\site\site.theme.default.less&quot; &gt;
-        &quot;$(ProjectDir)Content\site\site.theme.default.css&quot;">
-    </Exec>
-    <Exec Command="&quot;$(ProjectDir)tools\node\lessc.cmd&quot;
-        &quot;$(ProjectDir)Content\site\site.theme.light.less&quot; &gt;
-        &quot;$(ProjectDir)Content\site\site.theme.light.css&quot;">
-    </Exec>
 </Target>
 ...
 ```
 
-Here *site.less*, *site.theme.default.less* and *site.theme.light.less* files are compiled to their corresponding css files in the same directory.
+Here *site.less* file is compiled to its corresponding css file in the same directory.
 
 > See http://lesscss.org/ for more information on LESS compiler and its syntax.
