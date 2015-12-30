@@ -12,5 +12,5 @@ Sol tarafta, üst kısmındaki giriş kutusundan arama özelliği olan bir navig
 
 Üst navigasyonda, site ismi, giriş yapmış kullanıcının adı ve tema / dil seçeneklerine erişebileceğimiz bir ayarlar butonu bulunmakta.
 
-* [Theming](theming.md)
-* [Localization](localization.md)
+* [Temalar](theming.md)
+* [Dil Değiştirme](localization.md)
