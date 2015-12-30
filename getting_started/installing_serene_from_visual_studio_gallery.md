@@ -1,4 +1,4 @@
-# Serene'yi Visual Studio Galerisinden Kurmak
+# Serene'nin Visual Studio Galerisinden Kurulumu
 
 Tarayıcınızda http://visualstudiogallery.msdn.microsoft.com/ adresini açın.
 
