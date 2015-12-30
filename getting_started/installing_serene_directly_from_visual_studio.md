@@ -18,11 +18,6 @@ Click the *Online (Çevrimiçi)* bölümüne tıklayın ve *Retrieving informati
 
 ![Serene Arama Sonucu](img/new_project_dialog_serene.jpg)
 
-
-Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.
-
-> Please don't name it *Serenity*. It may conflict with other Serenity assemblies.
-
 Uygulamanıza *Sirketim*, *Urunum*, *MerhabaDunya* benzeri bir isim verin, ya da varsayılan *Serene1* olarak bırakabilirsiniz.
 
 > Lütfen adını *Serenity* yapmayın. Diğer Serenity kitaplıklarıyla çakışacaktır.
