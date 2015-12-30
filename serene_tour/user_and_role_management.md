@@ -1,20 +1,20 @@
-# User and Role Management
+# Kullanıcı ve Rol Yönetimi
 
-Serene has user, role and rights management built in.
+Serene kullanıcı, rol ve hak yönetimi sistemine sahiptir.
 
-> This feature is not embedded in Serenity itself. It is just a sample, so you can always implement and use your user management of choice. We'll take a look at how in following chapters.
+> Bu özellik Serenity'nin kendisinde entegre değildir. Her ne kadar tam özellikli çalışsa da bir örnek olarak hazırlanmıştır. İsterseniz kendinize has kullanıcı yönetiminizi tasarlayıp Serenity ile kullanabilirsiniz. Nasıl yapılacağını ilerleyen bölümlerde göreceğiz.
 
-Open Administration / Roles to create roles *Administrators* and *Translators*. 
+*Administration / Roles (Sistem Yönetimi / Roller)* sayfasını açıp *Administrators (Yöneticiler)* ve *Translators (Çevirmenler)* rollerini oluşturalım.
 
-Click *New Role* and  and type *Administrators*, then click Save.
+*New Role (Yeni Rol)* e tıklayıp *Administrators* yazın ve Save (Kaydet) düğmesine tıklayın.
 
-Repeat it for *Translators*.
+Aynısını *Translators* için de tekrarlayın.
 
-![Create Admin Role](img/create_admin_role.jpg)
+![Create Admin Role](img/create_admin_role.png)
 
 Then click role *Administrators* to open edit form, and click *Edit Permissons* button to modify its permissions. Check all boxes to grant every permisson to this role, then click *OK*.
 
-![Admin Permissions](img/admin_permissions.jpg)
+![Admin Permissions](img/admin_permissions.png)
 
 Repeat same steps for the *Translations* role but this time grant only the *Administration: Languages and Translations* permission.
 
@@ -22,7 +22,7 @@ Navigate to *Administration / User Management* page to add more users.
 
 Click *admin* user to edit its details.
 
-![Edit Admin User](img/edit_admin_user.jpg)
+![Edit Admin User](img/edit_admin_user.png)
 
 Here you can change admin details like username, display name, email.
 
@@ -36,13 +36,13 @@ Lets create another one and grant roles / permissions to it.
 
 Close this dialog, click new user and type *translator* as username. Fill in other fields as you'd like, then click *Update*.
 
-![Create Translator User](img/create_translator_user.jpg)
+![Create Translator User](img/create_translator_user.png)
 
 > You may have noticed there is a *Apply Changes* button with a black disk icon without title, next to *Save*. Unlike *Save*, when you use it, the form stays open, so you can see how your record looks like after saving, also you can edit roles and permissions before closing the form.
 
 Now click *Translator* role to open its edit form and click *Edit Roles*. Grant him *Translators* role and click *OK*.
 
-![Edit Translator Roles](img/edit_translator_roles.jpg)
+![Edit Translator Roles](img/edit_translator_roles.png)
 
 > When you grant a role to a user, he gets all permissions granted to the role automatically. By clicking Edit Permissions and you can also grant extra permissions explicitly. But you can't revoke a role permission from a user, unless you remove him from the role.
 
@@ -50,9 +50,9 @@ Now close all dialogs and logout by clicking *admin* on top right of site and cl
 
 Try logging in with *translator* and the password you set.
 
-Translator user will only have access to Dashboard, Languages and Translations pages.
+Translator user will only have access to Dashboard, Theme Samples, Languages and Translations pages.
 
-![Translator Logged In](img/translator_logged_in.jpg)
+![Translator Logged In](img/translator_logged_in.png)
 
 
 
