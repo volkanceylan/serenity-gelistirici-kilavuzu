@@ -1,1 +1,3 @@
-/* CSS for website */
+html, body, .book.font-family-1 {
+    font-family: Tahoma, Arial;
+}
