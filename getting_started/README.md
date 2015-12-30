@@ -1,11 +1,11 @@
 # Getting Started
 
-The best and fastest way to get your hands dirty on Serenity is *SERENE*, which is a sample application template.
+Serenity ile çalışmaya örnek uygulama şablonu olan *SERENE*'yi kullanarak en kolay ve hızlı şekilde başlayabilirsiniz.
 
-You have two options to install *SERENE* template into your Visual Studio:
+Visual Studio'ya *SERENE* şablonunu kurmak için iki seçeneğiniz bulunmaktadır:
 
-* [Installing SERENE from Visual Studio Gallery](installing_serene_from_visual_studio_gallery.md)
+* [SERENE'yi Visual Studio Galerisinden Kurmak](installing_serene_from_visual_studio_gallery.md)
 
-* [Installing SERENE directly from Visual Studio](installing_serene_directly_from_visual_studio.md)
+* [SERENE'yi direk olarak Visual Studio İçinden Kurmak](installing_serene_directly_from_visual_studio.md)
 
-> You don't have to use this template to work with Serenity. You can add Serenity libraries to any .NET project with NuGet. It is also possible to add Serenity as a GIT submodule to your project and keep it always up to date. We'll cover these and more in other chapters.
+> Serenity ile çalışmak için bu şablonu kullanmak bir zorunluluk değildir. Serenity kitaplıklarını herhangi bir .NET projesine NuGet ile referans olarak ekleyebilirsiniz. Serenity'yi GIT alt modülü (submodule) olarak projenize dahil edip kaynak kodlarıyla birlikte kullanmak ta bir başka seçenektir. Bu konuları ve daha fazlasını ilerleyen bölümlerde ele alacağız.
