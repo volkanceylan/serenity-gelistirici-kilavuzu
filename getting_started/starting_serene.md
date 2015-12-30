@@ -2,19 +2,19 @@
 
 Serene şablonu kullanan projeniz Visual Studio'da oluşturulduktan sonra şuna benzer bir solution görürsünüz:
 
-![Initial Solution Content](img/initial_solution_content.jpg)
+![Başlangıç Çözüm İçeriği](img/initial_solution_content.jpg)
 
-It contains two projects, *Serene1.Script* and *Serene1.Web* (which is common for Serenity applications).
+Bu solution iki proje içerir. *Serene1.Script* ve *Serene1.Web* projeleri (ki bu Serenity uygulamaları için genellikle böyledir).
 
-*Serene1.Web* includes the server side code of our application, while *Serene1.Script* contains the script code.
+*Serene1.Web* uygulamanızın sunucu tarafı kodlarını içerirken. *Serene1.Script* istemci (client) tarafında kullanılan script kodlarını içerir.
 
-The script project looks like an ordinary .NET project but it actually generates Javascript code, using *Saltarelle Compiler* (https://github.com/erik-kallen/SaltarelleCompiler).
+Script projesi sıradan bir .NET kitaplığı gibi gözükür ama aslında Javascript kodu üretir. Bunun için *Saltarelle* C# => Javascript dönüştürücüsü (https://github.com/erik-kallen/SaltarelleCompiler). kullanılmaktadır.
 
-Web project is an ASP.NET MVC application.
+Web projesi normal bir ASP.NET MVC uygulamasıdır.
 
-Both projects have references to Serenity NuGet packages, so you can update them using package manager console anytime necessary.
+Her iki proje de ilgili Serenity NuGet paketlerine referans içermektedir. Yani gerektiğinde paket yöneticisi konsolunu (package manager console) kullanarak güncelleyebilirsiniz.
 
-Serene automatically creates its database in SQL local db at first run, so just press F5 and you are ready to go.
+Serene ilk açılışta ihtiyaç duyduğu veritabanlarını SQL Local DB'de (Visual Studio ile gelen entegre bir SQL sunucu) oluşturur. Yani F5'e basmanız uygulamanın çalışması için yeterlidir, herhangi bir ayar yapmanız gerekmez.
 
 When application launches use `admin` user and `serenity` password to login. You can change password or create more users later, using *Administration / User Management* page.
 
