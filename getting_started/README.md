@@ -4,9 +4,9 @@ Serenity ile çalışmaya, en kolay ve çabuk şekilde, örnek uygulama şablonu
 
 Visual Studio'ya *SERENE* şablonunu kurmak için iki seçeneğiniz bulunmaktadır:
 
-* [SERENE'yi Visual Studio Galerisinden Kurmak](installing_serene_from_visual_studio_gallery.md)
+* [SERENE'nin Visual Studio Galerisinden Kurulumu](installing_serene_from_visual_studio_gallery.md)
 
-* [SERENE'yi Direk Visual Studio İçinden Kurmak](installing_serene_directly_from_visual_studio.md)
+* [SERENE'nin Direk Visual Studio İçinden Kurulumu](installing_serene_directly_from_visual_studio.md)
 
 > Serenity ile çalışmak için bu şablonu kullanmak bir zorunluluk değildir. 
 
