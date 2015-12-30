@@ -51,7 +51,7 @@ Bunlar bizim Serenity'yi geliştirirken hedeflediklerimizle örtüşen kavramlar
 * İstenen SQL tablosu için başlangıç amaçlı servis ve kullanıcı arayüzü kodlarını üreten bir yardımcı uygulama (Sergen)
 * Sunucu tarafında T4 tabanlı kod üretimiyle, script tarafındaki bileşenlere (widget) intellisense / derleme zamanı kontrol desteğiyle erişim.
 * Script tarafından AJAX servislerine erişirken yine intellisense ve derleme zamanı kontrol sağlamak için T4 tabanlı kod üretimi.
-* Nitelik (attribute) tabanlı form yapısı. Arayüz sunucu tarafında basic bir C# sınıfı ile tasarlanır.
+* Nitelik (attribute) tabanlı form yapısı. Arayüz sunucu tarafında basit bir C# sınıfı ile tasarlanır.
 * Form, entity ve servis arasında, otomatik, ek işlem gerektirmeyen veri bağlama (data-binding).
 * Önbellekleme Yardımcıları (Yerel / Dağıtık)
 * Otomatik önbellek validasyonu
