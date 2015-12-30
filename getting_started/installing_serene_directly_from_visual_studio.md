@@ -2,21 +2,21 @@
 
 Visual Studio'yu başlatın ve  *New => Project (Yeni => Proje)* ye tıklayın.
 
-> Note that this application template requires Visual Studio 2012 or higher. Make sure you have the latest Visual Studio updates installed.
+> Bu uygulama şablonu Visual Studio 2012 ve sonrasını gerektirir. Lütfen, sorun yaşamamak için en son Visual Studio güncellemelerini yüklediğinizden emin olunuz.
 
-In the New Project dialog box *Recent*, *Installed* and *Online* sections will be shown on left and *Installed* is the active one.
+Yeni Proje diyaloğunda *Recent (Güncel)*, *Installed (Kurulu)* ve *Online (Çevrimiçi)* bölümleri solda görüntülenir ve *Installed* aktif olarak gelir.
 
-Click the *Online* section and wait a bit while *Retrieving information* message is on screen.
+Click the *Online (Çevrimiçi)* bölümüne tıklayın ve *Retrieving information (Bilgiler alınıyor)* mesajı ekrandayken bekleyin.
 
-> Please wait while it is loading results.
+> Sonuçları yüklerken lütfen bekleyiniz.
 
-![New Project Online](img/new_project_dialog_online.jpg)
+![Yeni Proje Online](img/new_project_dialog_online.jpg)
 
-Type *SERENE* into input box with *Search Online Templates* label and press ENTER.
+*Search Online Templates (Çevrimiçi Şablonlarda Ara)* başlıklı kuyuya *SERENE* yazıp ENTER a basın.
 
-You will see *Serene (Serenity Application Template)*:
+*Serene (Serenity Application Template)* öğesini göreceksiniz:
 
-![Serene Search Result](img/new_project_dialog_serene.jpg)
+![Serene Arama Sonucu](img/new_project_dialog_serene.jpg)
 
 
 Name your application something like *MyCompany*, *MyProduct*, *HelloWorld* or leave the default *Serene1*.
