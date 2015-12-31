@@ -1,38 +1,38 @@
 
-# Tutorial: Movie Database
+# Öğretici: Film Veritabanı
 
-Let's create editing interface for some site similar to IMDB with Serenity.
+IMDB benzeri bir site için düzenleme arayüzünü Serenity ile geliştireceğiz.
 
-> You can find source code for this tutorial at: 
+> Bu öğretici için kaynak kodu şurada bulabilirsiniz: 
 
 > https://github.com/volkanceylan/Serenity-Tutorials/tree/master/MovieTutorial
 
 
 
-### Create a new project named *MovieTutorial*
+### *MovieTutorial* İsim Yeni Bir Proje Oluşturma
 
-In Visual Studio click File -> New Project. Make sure you choose *Serene* template. Type *MovieTutorial* as name and click *OK*.
+Visual Studio'da File -> New Project (Dosya -> Yeni Proje) ye tıklayınız. *Serene* şablonunun seçili olduğundan emin olun. Proje ismi olarak *MovieTutorial* yazın ve *OK* e basın.
 
-In Solution explorer, you should see two projects with names *MovieTutorial.Web* and *MovieTutorial.Script*.
+Solution (çözüm) oluşturulduktan sonra *MovieTutorial.Web* ve *MovieTutorial.Script* isimli iki ayrı proje görüyor olmalısınız.
 
-> Make sure *MovieTutorial.Web* is the startup project (it should be bold), if not right click on project name and click *Set As Startup Project*.
+> *MovieTutorial.Web*'in başlangıç projesi olduğundan emin olunuz (koyu fontlu olmalı). Eğer değilse, proje adına sağ tuşla tıklayın ve *Set As Startup Project (Başlangıç Projesi Olarak Belirle)* yi seçin.
 
 
 
-### What Are These Project Files?
+### Bu Proje Dosyaları Nedir?
 
-Serenity applications usually has at least two projects. One for server side code plus static resources like css files, images etc. (MovieTutorial.Web) and one for client side code (MovieTutorial.Script).
+Serenity uygulamaları genellikle en az iki projeden oluşur. Bir tanesi sunucu tarafı kodlar ile css dosyaları, resimler gibi statik kaynakları içerir (MovieTutorial.Web) ve diğeri de istemci tarafı script kodlarını içerir (MovieTutorial.Script).
 
-MovieTutorial.Script looks like an ordinary C# class library but the code it contains is actualy compiled to Javascript using Saltarelle. 
+MovieTutorial.Script sıradan bir C# sınıf kitaplığı gibi gözükse de içerdiği kod aslında Saltaralle ile Javascript koduna derlenir.
 
-> Its output (MovieTutorial.Script.js) will be copied to folder *Scripts/site/* under *MovieTutorial.Web*. So at runtime, only MovieTutorial.Web project is used.
+> Script projesinin çıktısı (MovieTutorial.Script.js) derlendiğinde *MovieTutorial.Web* projesinin altındaki *Scripts/site/* klasörüne kopyalanır. Yani aslında çalışma zamanında, sadece MovieTutorial.Web projesi kullanılır. Canlıya almanız gereken proje de Web projesidir.
 
-### Adding Project Dependency
+### Proje Bağımlılığı Eklemek
 
-By default, Visual Studio only builds MovieTutorial.Web project when you press F5 to run. 
+Visual Studio, F5 e basıp uygulamnızı çalıştırdığınızda, varsayılan olarak sadece başlangıç projesi olan MovieTutorial.Web projesini derler. Script projesini siz özellikle istemedikçe derlemez.
 
-> This is controlled by a setting under Visual Studio Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run". It is not recommended to change it.
+> Bu durum *Visual Studio -> Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run (Visual Studio Seçenekleri -> Proje ve Çözümler -> Derle ve Çalıştır -> Çalıştırınca sadece başlangıç projesi ve bağımlılıklarını derle)* seçeneği ile kontrol edilmektedir. Ancak değiştirmeniz önerilmez.
 
-To make Script project also build when Web project is run, right click MovieTutorial.Web project, click *Build Dependencies -> Project Dependencies* and check *MovieTutorial.Script* under *Dependencies* tab.
+Script projesinin de, Web projesi çalıştırıldığında derlenmesini sağlamak için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies -> Project Dependencies (Derleme Bağımlılıkları -> Proje Bağımlılıkları)* seçeneğine tıklayın ve *Dependencies (Bağımlılıklar)* altındaki *MovieTutorial.Script* i işareti hale getirin.
 
-> Unfortunately, there is no way, we can set this dependency in Serene template.
+> Malesef, bu ayarı Serene şablonundan bizim yapabilmemiz için bir yol bulunmamakta.
