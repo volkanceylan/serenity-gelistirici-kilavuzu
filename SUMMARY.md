@@ -10,7 +10,7 @@
    * [Yerelleştirme](serene_tour/localization.md)
    * [Kullanıcı ve Rol Yönetimi](serene_tour/user_and_role_management.md)
    * [Listing Pages](serene_tour/listing_pages.md)
-   * [Edit Dialogs](serene_tour/edit_dialogs.md)
+   * [Düzenleme Diyalogları](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
        * [Creating Movie Table](tutorials/movies/creating_movie_table.md)
