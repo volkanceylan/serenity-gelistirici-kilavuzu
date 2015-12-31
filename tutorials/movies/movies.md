@@ -35,4 +35,4 @@ Visual Studio, F5 e basıp uygulamnızı çalıştırdığınızda, varsayılan 
 
 Script projesinin de, Web projesi çalıştırıldığında derlenmesini sağlamak için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies -> Project Dependencies (Derleme Bağımlılıkları -> Proje Bağımlılıkları)* seçeneğine tıklayın ve *Dependencies (Bağımlılıklar)* altındaki *MovieTutorial.Script* i işareti hale getirin.
 
-> Malesef, bu ayarı Serene şablonundan bizim yapabilmemiz için bir yol bulunmamakta.
+> Malesef, bu ayarı Serene şablonundan bizim yapabilmemiz için bir yol bulunmamakta. Bu ayarı yapmayı atladığınız taktirde, ileride script projesi derlenmediği için bazı tarayıcı hatalarıyla karşılaşabilirsiniz.
