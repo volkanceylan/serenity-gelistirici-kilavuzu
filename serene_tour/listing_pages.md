@@ -32,9 +32,9 @@ Grid in sol üstündeki arama kutusuna bir kelime yazarak verileri basit bir şe
 
 Bu arama varsayılan olarak ürün adında gerçekleşti. Başka bir alanda ya da birden fazla sahada da arama yaptırmak mümkün. Nasıl olacağına ilerleyen bölümlerde değineceğiz.
 
-Grid in sağ üst bölümünde, *Supplier (Tedarikçi)* ve *Category (Kategori)* alanlarına göre hızlı filtreleme çekme (dropdown) menüleri mevcut.
+Grid in sağ üst bölümünde, *Supplier (Tedarikçi)* ve *Category (Kategori)* alanlarına göre hızlı filtreleme açılır listeleri (dropdown) mevcut.
 
-> Kullanılan çekme (dropdown) bileşeni Select2'dir.
+> Kullanılan açılır liste (dropdown) bileşeni Select2'dir.
 
 > https://github.com/select2/select2
 
@@ -44,17 +44,17 @@ Eğer kategori listesinden *Seafood* u seçersek, sadece o kategorideki ürünle
 
 > Tüm sıralama, sayfalama ve filtreleme işlemleri, sunucu tarafında, Serenity servis işleyicilerinin ürettiği dinamik SQL sorguları ile yapılmaktadır.
 
-It is also possible to filter by any column by clicking *edit filter* link at bottom right of the grid.
+Sağ alttaki *edit filter (filtre düzenle)* bağlantısına tıklayarak, herhangi bir kolona göre filtrelemek te mümkün.
 
-![Products Edit Filter](img/products_edit_filter.jpg)
+![Ürünler Filtre Düzenle](img/products_edit_filter.png)
 
-Here you can add criteria by any column by clicking *add criteria* and choosing column name, choosing comparison operator from next dropdown, and setting a value. 
+Bu ekranda, bir kolona göre filtre koşulu eklemek için, *add criteria (koşul ekle)* ye tıklayıp, istediğin kolon ismini seçebilirsiniz. Ardından karşılaştırma operatörünü seçip istediğiniz değeri girmelisiniz.
 
-Some value editors are simple textboxes while some others may have dropdowns and other custom editors depending on column type.
+Buradaki bazı editörler basit metin kutuları iken, bazıları açılır listeler ya da kolon tipine göre değişen diğer özel editör tipleri olabilir.
 
-It is also possible to change *and* to *or* by clicking on it.
+Koşul satırları arasındaki bağlantıyı, *and (ve)* ile *or (veya)* arasında değiştirmek için üstlerine tıklayabilirsiniz.
 
-You can also group criteria by clicking parenthesis. Groups will have a bit more space between them than ordinary lines.
+Parantez işaretlerine tıklayarak, koşul satırlarını aralarında gruplamak (parantezlemek) te mümkündür. Gruplar arasında sıradan satırlardan biraz daha fazla boşluk bulunur.
 
 
 
