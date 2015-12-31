@@ -1,4 +1,4 @@
 
-# Tutorials
+# Öğreticiler
 
-* [Movie Database (similar to IMDB)](movies/movies.md)
+* [Film Veritabanı (IMDB benzeri)](movies/movies.md)
