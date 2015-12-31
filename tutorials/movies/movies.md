@@ -33,6 +33,6 @@ Visual Studio, F5 e basıp uygulamnızı çalıştırdığınızda, varsayılan 
 
 > Bu durum *Visual Studio -> Options -> Projects and Solutions -> Build And Run -> "Only build startup projects and dependencies on Run (Visual Studio Seçenekleri -> Proje ve Çözümler -> Derle ve Çalıştır -> Çalıştırınca sadece başlangıç projesi ve bağımlılıklarını derle)* seçeneği ile kontrol edilmektedir. Ancak değiştirmeniz önerilmez.
 
-Script projesinin de, Web projesi çalıştırıldığında derlenmesini sağlamak için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies -> Project Dependencies (Derleme Bağımlılıkları -> Proje Bağımlılıkları)* seçeneğine tıklayın ve *Dependencies (Bağımlılıklar)* altındaki *MovieTutorial.Script* i işareti hale getirin.
+Script projesinin de, Web projesi çalıştırıldığında derlenmesini sağlamak için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies -> Project Dependencies (Derleme Bağımlılıkları -> Proje Bağımlılıkları)* seçeneğine tıklayın ve *Dependencies (Bağımlılıklar)* altındaki *MovieTutorial.Script* i işaretli hale getirin.
 
 > Malesef, bu ayarı Serene şablonundan bizim yapabilmemiz için bir yol bulunmamakta. Bu ayarı yapmayı atladığınız taktirde, ileride script projesi otomatik derlenmediği için bazı tarayıcı hatalarıyla karşılaşabilirsiniz.
