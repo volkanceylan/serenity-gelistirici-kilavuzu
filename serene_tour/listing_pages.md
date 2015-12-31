@@ -12,33 +12,33 @@ Burada ürün ismine göre sıralanmış ürün listesini görüyoruz (başlang�
 
 Kolon başlıklarına tıklayarak sıralamayı değiştirebilirsiniz. Ters sıralamak için kolon başlığına tekrar tıklayın.
 
-To sort by multiple columns, you can use Shift+Click.
+Birden fazla kolona göre sıralamak için, Shift+Tıklama kullanabilirsiniz.
 
-Here is what it looks like after sorting by Category then Supplier columns:
+Önce *Category (Kategori)* sonra *Tedarikçi (Supplier)* kolonlarına göre sıralandığında grid şöyle bir şekil alır:
 
-![Products Category Supplier Sort](img/products_category_supplier.png)
+![Ürünler Kategori Tedarikçi Sıralaması](img/products_category_supplier.png)
 
-When you changed sort order, grid loaded data from a service with an AJAX request. 
+Sıralamayı değiştirdiğinizde, grid bir AJAX isteği ile servisten verileri tekrar yükledi.
 
-> When you open the page first time, initial records were also loaded by an AJAX call.
+> Sayfayı ilk açtığınızda gözüken başlangıç kayıtları da bir AJAX servis isteği ile yüklenmişti.
 
-By default grid loads records by 100 page size. Only records in current page are loaded from server. In the sample image, i changed page size to 20 (bottom left of grid) to show paging in effect.
+Varsayılan olarak, grid 100 lük sayfalar olarak kayıtları yükler. Sunucudan sadece etkin sayfadaki kayıtlar getirilir. Sol alttaki sayfa boyutunu 20 ye çekerek sayfalamanın nasıl çalıştığını görebilirsiniz.
 
-On top left of the grid, you can type something to do a simple search.
+Grid in sol üstündeki arama kutusuna bir kelime yazarak verileri basit bir şekilde süzebilirsiniz.
 
-Type *coffee* for example to see products containing it in their names.
+Örneğin *coffee* yazarak, bu kelimeyi ürün adında içeren ürünleri listeleyelim.
 
-![Products Coffee Search](img/products_coffee_search.png)
+![Ürünler Coffee Araması](img/products_coffee_search.png)
 
-It searched in product name field. It is also possible to use another, or multiple fields for quick search. We'll see how in later chapters.
+Bu arama varsayılan olarak ürün adında gerçekleşti. Başka bir alanda ya da birden fazla sahada da arama yaptırmak mümkün. Nasıl olacağına ilerleyen bölümlerde değineceğiz.
 
-On top right of the grid, there are quick filtering dropdowns for *Supplier* and *Category* fields.
+Grid in sağ üst bölümünde, *Supplier (Tedarikçi)* ve *Category (Kategori)* alanlarına göre hızlı filtreleme çekme (dropdown) menüleri mevcut.
 
-> Dropdown component used is Select2
+> Kullanılan çekme (dropdown) bileşeni Select2'dir.
 
 > https://github.com/select2/select2
 
-Choose *Seafood* as *Category* and it will show only products in that category.
+Eğer kategori listesinden *Seafood* u seçersek, sadece o kategorideki ürünler listelenir.
 
 ![Products Seafood](img/products_seafood.jpg)
 
