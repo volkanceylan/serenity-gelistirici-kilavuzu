@@ -11,7 +11,7 @@
    * [Kullanıcı ve Rol Yönetimi](serene_tour/user_and_role_management.md)
    * [Listeleme Sayfaları](serene_tour/listing_pages.md)
    * [Düzenleme Diyalogları](serene_tour/edit_dialogs.md)
-* [Tutorials](tutorials/readme.md)
+* [Öğreticiler](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
        * [Creating Movie Table](tutorials/movies/creating_movie_table.md)
        * [Generating Code For Movie Table](tutorials/movies/generating_code_for_movie_table.md)
