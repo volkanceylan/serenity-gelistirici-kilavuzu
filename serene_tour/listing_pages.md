@@ -1,8 +1,8 @@
-# Listing Pages
+# Listeleme Sayfaları
 
-Serene has listing pages and editing interface for Northwind database. Let's have a look at the Products page under Northwind module.
+Serene, Northwind veritabanı için listeleme ve düzenleme arayüzlerini içerir. Northwind modülü altındaki Products (Ürünler) sayfasına bir gözatalım.
 
-![Products Page Initial](img/products_page_initial.jpg)
+![Ürünler Sayfası](img/products_page_initial.png)
 
 Here we see list of products sorted by product name (initial sort order).
 
@@ -16,7 +16,7 @@ To sort by multiple columns, you can use Shift+Click.
 
 Here is what it looks like after sorting by Category then Supplier columns:
 
-![Products Category Supplier Sort](img/products_category_supplier.jpg)
+![Products Category Supplier Sort](img/products_category_supplier.png)
 
 When you changed sort order, grid loaded data from a service with an AJAX request. 
 
