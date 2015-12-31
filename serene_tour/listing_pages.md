@@ -4,13 +4,13 @@ Serene, Northwind veritabanı için listeleme ve düzenleme arayüzlerini içeri
 
 ![Ürünler Sayfası](img/products_page_initial.png)
 
-Here we see list of products sorted by product name (initial sort order).
+Burada ürün ismine göre sıralanmış ürün listesini görüyoruz (başlangıç sıralaması).
 
-> Grid component is SlickGrid with a customized theme.
+> Kullanılan grid bileşeni, özel bir tema uygulanmış SlickGrid'dir:
 
 > https://github.com/mleibman/SlickGrid
 
-You can change order by clicking column headers. To sort descending, click the same column header again.
+Kolon başlıklarına tıklayarak sıralamayı değiştirebilirsiniz. Ters sıralamak için kolon başlığına tekrar tıklayın.
 
 To sort by multiple columns, you can use Shift+Click.
 
@@ -28,7 +28,7 @@ On top left of the grid, you can type something to do a simple search.
 
 Type *coffee* for example to see products containing it in their names.
 
-![Products Coffee Search](img/products_coffee_search.jpg)
+![Products Coffee Search](img/products_coffee_search.png)
 
 It searched in product name field. It is also possible to use another, or multiple fields for quick search. We'll see how in later chapters.
 
