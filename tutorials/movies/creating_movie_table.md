@@ -1,10 +1,10 @@
 # *Movie (Film)* Tablosunun Oluşturulması
 
-Filmlerin bir listesini saklamak için bir *Movie* tablosuna ihtiyacımız var. Bu tabloyu eski usül teknikleri kullanarak, SQL Management Studio ile manuel oluşturabilirdik. Fakat bizim tercihimiz, *Fluent Migrator* kitaplığından faydalanarak *migration (göç)* yapısında oluşturmak:
+Filmlerin bir listesini saklamak için bir *Movie* tablosuna ihtiyacımız var. Bu tabloyu eski usül teknikleri kullanarak, SQL Management Studio ile manuel oluşturabilirdik. Fakat bizim tercihimiz, *Fluent Migrator* kitaplığından faydalanarak *migration (göç?)* sistemiyle oluşturmak:
 
-> Fluent Migrator is a migration framework for .NET much like Ruby on Rails Migrations. Migrations are a structured way to alter your database schema and are an alternative to creating lots of sql scripts that have to be run manually by every developer involved. Migrations solve the problem of evolving a database schema for multiple databases (for example, the developer’s local database, the test database and the production database). Database schema changes are described in classes written in C# that can be checked into a version control system.
+> Fluent Migrator, .NET için geliştirilmiş, Ruby on Rails Migrations kitaplığına çok benzeyen bir migration framework'üdür. Migration'lar veritabanı şemasının değiştirilmesi için yapısal bir yoldur ve ilgili her yazılımcı tarafından ayrı ayrı çalıştırılması gereken birçok sql script'i hazırlama yöntemine bir alternatiftir. Migration'lar birden çok veritabanı ortamının evrim geçiren şemalarında karşılaşılan sorunları çözer (örneğin, geliştiricinin yerel veritabanı, test veritabanı ve canlı veritabanı). Veritabanı şema değişiklikleri, C# da yazılan sınıflar olarak tanımlanır ve bir sürüm kontrol sisteminde versiyonlanabilir (check in).
 
-> See https://github.com/schambers/fluentmigrator for more information on FluentMigrator.
+> FluentMigrator ile ilgili daha fazla bilgi için bkz. https://github.com/schambers/fluentmigrator.
 
 Using *Solution Explorer* navigate to *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB*.
 
