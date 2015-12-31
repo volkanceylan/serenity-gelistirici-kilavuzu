@@ -6,21 +6,23 @@ Filmlerin bir listesini saklamak için bir *Movie* tablosuna ihtiyacımız var. 
 
 > FluentMigrator ile ilgili daha fazla bilgi için bkz. https://github.com/schambers/fluentmigrator.
 
-Using *Solution Explorer* navigate to *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB*.
+*Solution Explorer* ile *MovieTutorial.Web / Modules / Common / Migrations / DefaultDB* klasörünü gidiniz.
+
+> Aşağıdaki görüntü bu öğretici yazılırken alınmıştır. Serene'nin güncel sürümlerinde aynı lokasyonda DefaultDB ve NorthwindDB adında iki klasör bulunmaktadır. Çünkü Northwind veritabanı, Serene'nin kullanıcı, rol gibi bilgileri tuttuğu veritabanından ayrılmıştır ve iki ayrı veritabanı bulunmaktadır. Siz çalışmalarınızı DefaultDB altından yapabilirsiniz.
 
 ![Initial Migration Folder](img/movies_migration_initial.png)
 
-Here we already have three migrations. A migration is like a DML script that manipulates database structure.
+Görüntüde üç migration bulunmaktadır. Migration, veritabanı yapısını değiştiren bir DML (veri manupilasyon dili) script i gibidir.
 
-*DefaultDB_20141103_140000_Initial.cs* contains our initial migration that created *Northwind* tables and *Users* table.
+*DefaultDB_20141103_140000_Initial.cs*, bizim *Users (Kullanıcı)* ve *Roles (Roller)* tablolarımızı oluşturan başlangıç migration ıdır.
 
-Create a new migration file in the same folder with name *DefaultDB_20150915_185137_Movie.cs*. You can copy and change one of the existing migration files, rename it and change contents.
+Aynı klasörde (DefaultDB), adı *DefaultDB_20150915_185137_Movie.cs* olan yeni bir migration dosyası oluşturun. Bunun için mevcut dosyalardan birini kopyalayıp, adını değiştirip, içeriğini güncelleyebilirsiniz.
 
-> Migration file name / class name is actually not important but recommended for consistency and correct ordering.
+> Aslında migration dosya adı ve içindeki sınıfın adı sistem açısından önemsizdir, ancak tutarlılık ve düzgün sıralama için bu yapıda (y/a/g/sa/dk/sn) kullanmanız önerilir.
 
-*20150915_185137* corresponds to the time we are writing this migration in yyyyMMdd_HHmmss format. It will also act as a unique key for this migration.
+*20150915_185137* bu migration ı yazdığımız zamana *yyyyMMdd_HHmmss* formatında karşılık gelir. Ayrıca bu migration için benzersiz bir anahtar olarak da rol alacaktır.
 
-Our migration file should look like below:
+Hazırlayacağımız migration dosyası şu şekilde bir içeriğe sahip olmalı:
 
 ```cs
 using FluentMigrator;
@@ -52,7 +54,7 @@ namespace MovieTutorial.Migrations.DefaultDB
 }
 ```
 
-> Make sure you use the namespace *MovieTutorial.Migrations.DefaultDB* as Serene template applies migrations only in this namespace to the default database.
+> Sınıfın isim alanının (namespace) *MovieTutorial.Migrations.DefaultDB* olduğundan emin olun, çünkü Serene sadece bu namespace deki migration ları *Default (varsayılan)* veritabanına uygular.
 
 In *Up()* method we specify that this migration, when applied, will create a schema named *mov*. We will use a separate schema for movie tables to avoid clashes with existing tables. It will also create a table named *Movie* with "MovieId, Title, Description..." fields on it.
 
