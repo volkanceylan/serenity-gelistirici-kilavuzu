@@ -1,22 +1,25 @@
 
-# Edit Dialogs
+# Düzenleme Diyalogları
 
-When you click a product name in Products page, an editing dialog for that row is displayed.
+Ürün sayfasından bir ürün adına tıkladığınızda, o satır için düzenleme diyaloğu görüntülenir.
 
-![Product Editing](../getting_started/img/product_editing.jpg)
+![Product Editing](img/product_editing.png)
 
-This dialog is shown on client side, there is no post-back happening. Data for the clicked entity is loaded from server side using an AJAX request (only data, not markup). Dialog itself is a customized version of jQuery UI dialog.
+Bu diyalog istemci tarafında gösterilir, herhangi bir post-back işlemi sözkonusu değildir. Tıklanan kaydın verisi sunucu tarafından bir AJAX isteği ile getirilir (sadece veri, HTML gösterimi değil). 
 
-In this form we have three categories for fields: *General*, *Pricing* and *Status*. By clicking category links on top blue bar you can navigate to start of that category.
+> Diyalog nesnesi jQuery UI dialog objesinin Serene'ye özel temalandırılmış halidir.
 
-Each form field occupies a row with label and editor. You may choose to show more than one 
-field in a row if required (with CSS).
+Bu formda, alanlar üç kategoriye ayrılmıştır: *General (Genel)*, *Pricing (Fiyatlandırma)* ve *Status (Durum)*. Sağ üstteki kategori bağlantılarına tıklayarak, formdaki o kategorinin başlangıç noktasına hızlı bir şekilde ulaşabilirsiniz.
 
-Fields marked with "*" are required (cannot be empty).
+Her form alanı, bir etiket ve editör içeren bir satır işgal eder. 
 
-Each field has a specific type of editor tailored to its data type like *string*, *image upload*, *checkbox*, *select* etc.
+> Bir satırda birden fazla alanı göstermeniz gerekirse CSS ile bunu sağlayabilirsiniz.
 
-We would see such an HTML code if we looked at the source (simplified for brevity):
+Etkileri "*" ile işaretlenmiş satırlar zorunlu alanlardır (boş olamaz).
+
+Her alan, veri tipine göre belirlenmiş özel bir editör tipine sahiptir. Bunlar arasında *string (dize)*, *image upload (resim yükleme)*, *checkbox (işaret kutusu)*, *select (açılır liste)* sayılabilir.
+
+Eğer formun HTML kodunu incelersek, şöyle bir yapı görürüz (açık olması için sadeleştirilmiştir):
 
 ```html
 
@@ -35,11 +38,11 @@ We would see such an HTML code if we looked at the source (simplified for brevit
 ...
 ```
 
-Every field has a separate "div" of its own with class "field". Inside this div, there is a "label" element and another element (input, select, div) that changes with the editor type for that field.
+Her alan için, "field" CSS sınıfına sahip bir "div" bulunur. Bu "div" lerin içerisinde bir "label (etiket)" elemanı and o alanın editör tipine göre değişen bir başka eleman (input, select, div) bulunur.
 
-We can look at the class names of these elements to identify their editor types (e.g. *s-StringEditor*, *s-ImageUploadEditor*)
+Bu giriş elemanlarının CSS sınıflarına bakarak, editör tiplerini tespit edebiliriz (ör. *s-StringEditor*, *s-ImageUploadEditor*)
 
 
-In the toolbar we have a button to save current entity and close dialog (*Update*), next to it a smaller one that keeps dialog open after save and another one to delete current entity (obviously).
+Araç çubuğunda, şu anki kaydı saklayıp diyaloğu kapatmak için bir *Update (Güncelle)* butonu bulunur. Hemen yanındaki *Apply Changes (Değişiklikleri Uygula)* butonu ise diğerinden farklı olarak kayıt sonrasında diyaloğu kapatmaz. Son olarak, en sağdaki *Delete (Sil)* düğmesi ile mevcut kayıt silinebilir.
 
-Most Serenity editing dialogs has this familiar interface, though you can always customize buttons, fields, add tabs, and other interface elements.
+Çoğu Serenity düzenleme diyaloğu bu alışılmış arayüze sahiptir. Ancak isterseniz, bu diyalogları özelleştirip, düğmeler, alanlar, sekmeler ya da benzeri farklı arayüz elemanları ekleyebilirsiniz.
