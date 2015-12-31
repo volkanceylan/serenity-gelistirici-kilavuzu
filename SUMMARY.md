@@ -9,7 +9,7 @@
    * [Temalar](serene_tour/theming.md)
    * [Yerelleştirme](serene_tour/localization.md)
    * [Kullanıcı ve Rol Yönetimi](serene_tour/user_and_role_management.md)
-   * [Listing Pages](serene_tour/listing_pages.md)
+   * [Listeleme Sayfaları](serene_tour/listing_pages.md)
    * [Düzenleme Diyalogları](serene_tour/edit_dialogs.md)
 * [Tutorials](tutorials/readme.md)
    * [Movie Database](tutorials/movies/movies.md)
