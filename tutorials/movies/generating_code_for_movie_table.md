@@ -3,35 +3,38 @@
 
 ### Serenity Kod Üretici (Code Generator)
 
-Tablomuzun veritabanında bulunduğundan emin olduktan sonra, Serenity Kod Üreticiyi (sergen.exe) kullanarak başlangıç giriş arayüzünü oluşturacağız.
+Tablomuzun veritabanında bulunduğundan emin olduktan sonra, Serenity Kod Üreticiyi (sergen.exe) kullanarak ilk giriş arayüzünü oluşturacağız.
 
-In Visual Studio, open *Package Manager Console* by clicking *View* => *Other Windows* => *Package Manager Console*.
+Visual Studio, *Package Manager Console (Paket Yöneticisi Konsolu)*'nu, *View (Görünüm) * => *Other Windows (Diğer Pencereler)* => *Package Manager Console (Paket Yöneticisi Konsolu)* na tıklayarak açın.
 
-Type *sergen* and press Enter.
+*sergen* yazıp Enter'a basın.
 
-> Sometimes package manager console can't set path correctly and you may get an error executing Sergen. Restarting Visual Studio might resolve the issue. 
+> Bazen, paket yöneticisi ilk açılışta PATH değişkenini düzgün ayarlayamaz (muhtemel NuGet bug ı) ve *sergen* yazıp çalıştırmayı denediğinizde bir hata alabilirsiniz. Visual Studio'yu yeniden başlatmak genellikle sorunu çözer. 
 
-> Another option is to open Sergen.exe from Windows Explorer. Right click on *MovieTutorial* solution in Solution Explorer, click *Open In File Explorer*. Sergen.exe is under *packages\Serenity.CodeGenerator.X.Y.Z\tools* directory.
+> Bir başka seçenek te Windows Dosya Gezgininden (Windows Explorer) sergen.exe yi manuel açmaktır. *Solution Explorer* da *MovieTutorial* solution'ına sağ tuşla tılayın, *Open In File Explorer (Dosya Gezgininde Aç)*'a tıklayın. Sergen.exe
+*packages\Serenity.CodeGenerator.X.Y.Z\tools* klasöründe bulunmaktadır.
 
 ![Movies Code Generator](img/movies_code_generator.png)
 
 
-### Setting Project Location
+### Proje Konumlarının Belirlenmesi
 
-When you first run Sergen, Web Project and Script Project fields will be prefilled for you. If you are using an older version of Serene than 1.6.2, follow these steps:
+Sergen'i ilk çalıştırdığınızda, Web Project (Web Projesi) ve Script Project (Script Projesi) alanları sizin için otomatik olarak doldurulmuş gelir. 
 
-Browse to your solution directory and locate web and script projects using "..." buttons.
+> Eğer Serene 1.6.2'den daha eski bir sürüm kullanıyorsanız, aşağıdaki adımları takip edin:
 
-Another option is to set them to values below:
+> "..." butonlarına tıklayarak Solution klasörünüze gidip web ve script projelerini seçin.
 
-* ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
-* ..\\..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
+> Bir başka opsiyon, aşağıda verilen değerlere ayarlamaktır (copy paste).
+
+> * ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
+> * ..\\..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
  
-> If you used another project name than *MovieTutorial*, e.g. *MyMovies*, replace *MovieTutorial* with it.
+> Eğer *MovieTutorial* dan başka bir isim kullandıysanız, ör. *MyMovies*, *MovieTutorial* ı onunla değiştirin.
 
-Once you set this values, and generate your first page, you won't have to set them again. This options will be saved in *Serenity.CodeGenerator.config* in your solution directory.
+Bu ayarları bir kez belirleyip, ilk sayfanızı ürettikten sonra, tekrar doldurmak zorunda kalmayacaksınız. Bu seçenekler, solution klasörünüzdeki *Serenity.CodeGenerator.config* dosyasında saklanacak.
 
-This values are required, as Sergen will include generated files to your project.
+Proje konumlarının belirlenmesi önemlidir, çünkü Sergen üreteceği dosyaları projelerinize ancak bu şekilde dahil edebilecektir.
 
 ### Root Namespace Option
 
