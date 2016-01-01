@@ -1,9 +1,9 @@
 
-# Generating Code For Movie Table
+# Movie Tablosu İçin Kod Üretilmesi
 
-### Serenity Code Generator
+### Serenity Kod Üretici (Code Generator)
 
-After making sure that our table exists in the database, we will use Serenity Code Generator (sergen.exe) to generate initial editing interface.
+Tablomuzun veritabanında bulunduğundan emin olduktan sonra, Serenity Kod Üreticiyi (sergen.exe) kullanarak başlangıç giriş arayüzünü oluşturacağız.
 
 In Visual Studio, open *Package Manager Console* by clicking *View* => *Other Windows* => *Package Manager Console*.
 
