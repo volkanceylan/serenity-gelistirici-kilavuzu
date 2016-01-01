@@ -82,7 +82,7 @@ Bu genellikle tablo adına karşılık gelir fakat bazen tablo isimlerinde alt �
 
 > Serene 1.6.2+ sonrasında entity identifier otomatik olarak tablo isminin Pascal (büyük harf ile başlayan küçük harfle devam eden) isimlendirmesine çevrilmiş bir haline ayarlanır.
 
-Tablo ismimiz *Movie*, yani geçerli ve uygun bir C# tanımlayıcısı. Öyleyse *Movie* olarak kullanabiliriz.
+Tablo ismimiz *Movie*, yani geçerli ve uygun bir C# tanımlayıcısı. Öyleyse *Movie* olarak kullanabiliriz. Üretilen entity mizin sınıf ismi *MovieRow* olacak.
 
 Bu isim ayrıca diğer sınıf isimlerinin belirlenmesinde de kullanılacak. Örneğin sayfa kontrolcümüz (page controller) *MovieController* olarak isimlendirilecek.
 
