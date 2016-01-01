@@ -106,9 +106,9 @@ Projeler değişmiş olduğundan dolayı, Visual Studio tekrar yüklemek isteyip
 
 Solution'ı *TEKRAR DERLEYİN (REBUILD)* ve *F5* e basarak uygulamayı başlatın.
 
-> Lütfen *SOLUTION'ı TEKRAR DERLEDİĞİNİZDEN* emin olunuz (solution a sağ tuşla tıklayıp REBUILD i seçerek). Bazı kullanıcılar, kod ürettikten sonra boş bir sayfayla karşılaştıklarını rapor etmektedirler. Bunun neden script projesinin düzgün bir şekilde derlenmemiş olmasıdır. Özellikle MovieTutorial.Script projesini tekrar derlemelisiniz. Çıktısı derleme sonucunda MovieTutorial.Web/Scripts/site klasörüne kopyalanmakta ve buradan kullanılmaktadır.
+> Lütfen *SOLUTION'ı TEKRAR DERLEDİĞİNİZDEN* emin olunuz (solution a sağ tuşla tıklayıp REBUILD i seçerek). Bazı kullanıcılar, kod ürettikten sonra boş bir sayfayla karşılaştıklarını rapor etmektedirler. Bunun nedeni script projesinin düzgün bir şekilde derlenmemiş olmasıdır. Özellikle MovieTutorial.Script projesini tekrar derlemelisiniz. Çıktısı derleme sonucunda MovieTutorial.Web/Scripts/site klasörüne kopyalanmakta ve buradan kullanılmaktadır.
 
-> Another option is to add a project dependency. To make Script project also build when Web project is run, right click MovieTutorial.Web project, click *Build Dependencies -> Project Dependencies* and check *MovieTutorial.Script* under *Dependencies* tab.
+> Bir diğer seçenek, proje bağımlılığı eklemektir. Script projesinin de Web projesi çalıştırıldığında derlenmesi için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies (Derleme Bağımlılıkları) -> Project Dependencies (Proje Bağımlılıkları)* nı seçin ve *Dependencies (Bağımlılıklar)* sekmesi altındaki *MovieTutorial.Script* i işaretli hale getirin.
 
 Use *admin* as username, and *serenity* as password to login.
 
