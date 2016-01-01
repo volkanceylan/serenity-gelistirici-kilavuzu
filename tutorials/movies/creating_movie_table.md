@@ -56,28 +56,29 @@ namespace MovieTutorial.Migrations.DefaultDB
 
 > Sınıfın isim alanının (namespace) *MovieTutorial.Migrations.DefaultDB* olduğundan emin olun, çünkü Serene sadece bu namespace deki migration ları *Default (varsayılan)* veritabanına uygular.
 
-In *Up()* method we specify that this migration, when applied, will create a schema named *mov*. We will use a separate schema for movie tables to avoid clashes with existing tables. It will also create a table named *Movie* with "MovieId, Title, Description..." fields on it.
+*Up()* metounda bu migration'ın uygulandığında, *mov* isimli bir şema oluşturacağını belirtiyoruz. Film tabloları için ayrı bir şema kullanacağız ki diğer tablolarla çakışmasın.
+Migration ayrıca *Movie* isimli "MovieId, Title, Description... (Film ID, Başlık, Açıklama)" alanlarına sahip bir tablo da oluşturacak.
 
-We could implement *Down()* method to make it possible to undo this migration (drop movie table and mov schema etc), but for the scope of this sample, lets leave it empty.
+*Down()* metodunu doldurarak, bu migration ın gerektiğinde geri alınabilmesini de (film tablosunu silmek ve mov şemasını düşürmek gibi), fakat bu örnek kapsamında şimdilik boş bırakalım.
 
-> Inability to undo a migration might not hurt much, but deleting a table by mistake could do more damage.
+> Bir migration ın geri alınmaması pek sıkıntı yaratmayabilir ama yanlışlıkla bir tabloyu silmek çok daha büyük zararlara neden olabilir.
 
-On top of our class we applied a Migration attribute.
+Sınıfımızın üstünde, bir *Migration* niteliği (attribute) uyguladık.
 
 ```cs
 [Migration(20150915185137)]
 ```
 
-This specifies a unique key for this migration. After a migration is applied to a database, its key is recorded in a special table specific to FluentMigrator ([dbo].[VersionInfo]), so same migration won't be applied again.
+Bu migration için benzersiz bir anahtar (unique key) belirler. Bir migration, veritabanına uygulandıktan sonra, anahtarı FluentMigrator'a özel bir tabloda ([dbo].[VersionInfo]) saklanır, bu sayede aynı migration tekrar uygulanmaz.
 
-> Migration key should be in sync with class name (for consistency) but without underscore as migration keys are Int64 numbers.
+> Migration anahtarı sınıf ismiyle aynı olmalıdır, fakat isimden farklı olarak alt çizgi içeremez, çünkü migration anahtarları Int64 sayılardır.
 
-> Migrations are executed in the key order, so using a sortable datetime pattern like yyyyMMdd for migration keys looks like a good idea.
+> Migration lar anahtar sırasında (sayısal olarak küçükten büyüğe) uygulanır. Bu nedenle, yyyyMMdd gibi sıralanabilir bir tarih/zaman deseni tercih edilmesi idealdir (zorunlu olmasa da).
 
 
-### Running Migrations
+### Migration'ların Çalıştırılması
 
-By default, Serene template runs all migrations in *MovieTutorial.Migrations.DefaultDB* namespace. This happens on application start automatically. The code that runs migrations are in *App_Start/SiteInitialization.cs* file:
+Varsayılan olarak, Serene şablonu *Default* veritabanı üzerinde *MovieTutorial.Migrations.DefaultDB* isim alanındaki tüm migration ları çalıştırır. Bu işlem ilk uygulama başlangıcında otomatik olarak yapılır. Migration ları çalıştıran kod *App_Start/SiteInitialization.cs*  dosyasındadır (güncel sürümlerde RunMigrations metodu *SiteInitialization.Migrations.cs* dosyasına taşınmıştır)
 
 ```cs
 
@@ -119,23 +120,25 @@ public static partial class SiteInitialization
 
 ```
 
-> There is a safety check on database name to avoid running migrations on some arbitrary database other than the default Serene database (MovieTutorial_Default_v1). You can remove this check if you understand the risks. For example, if you change default connection in web.config to your own production database, migrations will run on it and you will have Northwind etc tables even if you didn't mean to.
+> RunMigrations metodu içinde, migration ları yanlışlıkla Serene dışında, rastgele bir veritabanı üzerinde çalıştırmamak için, veritabanı adına göre kontrol yapan (MovieTutorial_Default_v1) bir güvenlik önlemi bulunmaktadır. Bu kontrolü (*safety check* yazan satırlar) risklerin farkında olduktan sonra kaldırabilirsiniz. 
 
-Now press F5 to run your application and create Movie table in default database.
+> Bu kontrolün eklenmesinin sebebi, web.config deki bağlantı dizesini farkında olmadan değiştiriseniz, mesela canlı veritabanınıza, Northwind vs. tablolarını burada oluşturmayı engellemektir.
+
+Şimdi F5 e basarak uygulamanızı çalıştırın ve Movie tablosunun veritabanında oluşturulmasını sağlayın.
 
 
-### Verifying That the Migration is Run
+### Migration'ın Çalışmış Olduğunu Doğrulama
 
-Using Sql Server Management Studio or Visual Studio -> Connection To Database, open a connection to MovieTutorial_Default_v1 database in server *(localdb)\v11.0*.
+Sql Server Management Studio ya da Visual Studio içinden *Connect To Database* aracıyla, *(localdb)\v11.0* sunucusundaki *MovieTutorial_Default_v1* veritabanına bağlanın.
 
-> (localdb)\v11.0 is a LocalDB instance created by SQL Server 2012 LocalDB. 
+> (localdb)\v11.0, SQL Server 2012 LocalDB tarafından oluşturulan bir LocalDB örneği (instance) dır. 
 
-> If you didn't install LocalDB yet, download it from https://www.microsoft.com/en-us/download/details.aspx?id=29062.
+> Eğer henüz LocalDB'yi kurmadıysanız, şu adresten indirebilirsiniz https://www.microsoft.com/en-us/download/details.aspx?id=29062.
 
-> If you have SQL Server 2014 LocalDB, your server name would be (localdb)\v12.0, so change connection string in web.config file. 
+> Eğer SQL Server 2014 LocalDB ya da üstünü kullanıyorsanız, sunucu adınız (localdb)\v12.0, ya da (localdb)\MSSqlLocalDB olacaktır. web.config teki bağlantıları buna göre düzenleyin.
 
-> You could also use another SQL server instance, just change the connection string to target server and remove the migration safety check.
+> Başka bir SQL server tipi de kullanabilirsiniz. Sadece bağlantı dizesini (connection string) web.config de değiştirin ve migration güvenlik kontrolünü kaldırın.
 
-You should see *[mov].[Movies]* table in SQL object explorer.
+SQL öğe gezgininde (object explorer) *[mov].[Movies]* tablosunu görmelisiniz.
 
-Also when you view data in *[dbo].[VersionInfo]* table, Version column in the last row of the table should be *20150915185137*. This specifies that the migration with that version number (migration key) is already executed on this database.
+Ayrıca, *[dbo].[VersionInfo]* tablosunun içindeki verilere baktığınızda, tablonun son satırında, Version kolonundaki değer *20150915185137*. Bu, belirtilen versiyon numarasına sahip migration'ın veritabanı üzerinde çalıştırılmış olduğunu garantiler.
