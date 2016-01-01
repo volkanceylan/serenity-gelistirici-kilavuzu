@@ -25,7 +25,7 @@ Sergen'i ilk çalıştırdığınızda, Web Project (Web Projesi) ve Script Proj
 
 > "..." butonlarına tıklayarak Solution klasörünüze gidip web ve script projelerini seçin.
 
-> Bir başka opsiyon, aşağıda verilen değerlere ayarlamaktır (copy paste).
+> Bir başka opsiyon, aşağıda verilen değerleri belirlemektir (kopyala yapıştır).
 
 > * ..\\..\\..\\MovieTutorial\\MovieTutorial.Web\\MovieTutorial.Web.csproj
 > * ..\\..\\..\\MovieTutorial\\MovieTutorial.Script\\MovieTutorial.Script.csproj
