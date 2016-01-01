@@ -36,7 +36,7 @@ Bu ayarları bir kez belirleyip, ilk sayfanızı ürettikten sonra, tekrar doldu
 
 Proje konumlarının belirlenmesi önemlidir, çünkü Sergen üreteceği dosyaları projelerinize ancak bu şekilde dahil edebilecektir.
 
-### Root Namespace Option
+### Kök İsim Alanı (Root Namespace) Seçeneği
 
 Set root namespace option to the Solution name you used, e.g. *MovieTutorial*. If your project names are MyProject.Web and MyProject.Script, your root namespace is MyProject by default. This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
 
