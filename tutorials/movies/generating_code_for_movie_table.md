@@ -96,17 +96,17 @@ Serenity'de kaynaklara erişim (sayfalar, servisler vs.), basit dizeler (string)
 Şu an için Movie sayfamız sadece sistem yöneticileri tarafından kullanılabilecek (daha sonra içerik moderatörlerine çevrilebilir). Bu yüzden izin olarak *Administration:General* belirleyelim. Varsayılan olarak, Serene şablonunda sadece *admin* kullanıcısı bu izne sahiptir.
 
 
-### Generating Code for First Page
+### İlk Sayfamız İçin Kodun Üretilmesi
 
-After setting parameters as shown in the image above, click *Generate Code for Entity* button. Sergen will generate several files and include them in MovieTutorial.Web and MovieTutorial.Script projects.
+Parametreleri resimdeki gibi ayarladıktan sonra *Generate Code for Entity* düğmesine basın. Sergen birkaç dosya (10 civarında) üretip, MovieTutorial.Web and MovieTutorial.Script proejelerine dahil edecektir.
 
-Now you can close Sergen, and return to Visual Studio.
+Şimdi Sergen'i kapatıp, Visual Studio'ya geri dönebiliriz.
 
-As projects are modified, Visual Studio will ask if you wan't to reload changes, click Reload All.
+Projeler değişmiş olduğundan dolayı, Visual Studio tekrar yüklemek isteyip istemediğinizi soracaktır. *Reload All* a tıklayın.
 
-*REBUILD the Solution* and then press *F5* to launch application.
+Solution'ı *TEKRAR DERLEYİN (REBUILD)* ve *F5* e basarak uygulamayı başlatın.
 
-> Please make sure you REBUILD SOLUTION, by right clicking solution name and clicking rebuild. Some users report that they got an empty page after generating code. It's due to script project is not built properly. You should specially rebuild MovieTutorial.Script project. It's output is placed under MovieTutorial.Web/Scripts/site folder on rebuild.
+> Lütfen *SOLUTION'ı TEKRAR DERLEDİĞİNİZDEN* emin olunuz (solution a sağ tuşla tıklayıp REBUILD i seçerek). Bazı kullanıcılar, kod ürettikten sonra boş bir sayfayla karşılaştıklarını rapor etmektedirler. Bunun neden script projesinin düzgün bir şekilde derlenmemiş olmasıdır. Özellikle MovieTutorial.Script projesini tekrar derlemelisiniz. Çıktısı derleme sonucunda MovieTutorial.Web/Scripts/site klasörüne kopyalanmakta ve buradan kullanılmaktadır.
 
 > Another option is to add a project dependency. To make Script project also build when Web project is run, right click MovieTutorial.Web project, click *Build Dependencies -> Project Dependencies* and check *MovieTutorial.Script* under *Dependencies* tab.
 
