@@ -38,7 +38,7 @@ Proje konumlarının belirlenmesi önemlidir, çünkü Sergen üreteceği dosyal
 
 ### Kök İsim Alanı (Root Namespace) Seçeneği
 
-Bu seçeneği, kullanmış olduğunuz Solution ismine göre belirleyin, ör. *MovieTutorial*. Eğer proje isimleriniz MyProject.Web ve MyProject.Script ise kök isim alanınız MyProject'dir. Bu kritik önem arzeder, bu yüzden farklı birşeye ayarlamadığınızdan emin olunuz. Çünkü Serene şablonu üretilen tüm kodun bu kök isim alanı (root namespace) altında olduğunu varsayar.
+Bu seçeneği, kullanmış olduğunuz Solution ismine göre belirleyin, ör. *MovieTutorial*. Eğer proje isimleriniz MyProject.Web ve MyProject.Script ise kök isim alanınız MyProject'dir. Bu kritik önem arzeder, bu nedenle farklı birşeye ayarlamadığınızdan emin olunuz. Çünkü Serene şablonu üretilen tüm kodun bu kök isim alanı (root namespace) altında olduğunu varsayar.
 
 Bu seçenek te saklandığından, bir sonraki sefer tekrar doldurmanız gerekmez.
 
