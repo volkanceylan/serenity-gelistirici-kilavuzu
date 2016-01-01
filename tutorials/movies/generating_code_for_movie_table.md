@@ -43,9 +43,9 @@ Bu seçeneği, kullanmış olduğunuz Solution ismine göre belirleyin, ör. *Mo
 Bu seçenek te saklandığından, bir sonraki sefer tekrar doldurmanız gerekmez.
 
 
-### Choosing Connection String
+### Bağlantı Dizesinin (Connection String) Seçilmesi
 
-Once you set Web project name, Sergen populates connection dropdown with connection strings from your web.config file. We have only one connection string in our web.config yet, so just select *Default*.
+Web proje ismi belirlendiğinde, Sergen bağlantı açılır listesini web.config dosyanızdan okuduğu bağlantı dizeleriyle doldurur. Burada, *Default* ve *Northwind* bağlantıları olmalı. *Default* olanı seçelim.
 
 
 ### Selecting Table To Generate Code For
