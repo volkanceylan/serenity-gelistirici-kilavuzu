@@ -71,22 +71,22 @@ Modül adı oluşturulan sayfaların isim alanı (namespace) ve URL lerinin beli
 Örneğin, yeni üreteceğimiz sayfa, *MovieTutorial.MovieDB* isim alanı altında olacak ve *~/MovieDB/Movie* relatif adresinde bulunacak.
 
 
-### ConnectionKey Parameter 
+### Connection Key (Bağlantı Anahtarı)
 
-Connection key is set to the connection key of selected connection string in web.config file. You usually don't have to change it, just leave default.
+Bağlantı anahtarı, daha önce seçilen bağlantının anahtarı olarak belirlenir. Genellikle bu ayarı değiştirmeniz gerekmez. Default olarak bırakabilirsiniz.
 
 
-### Entity Identifier
+### Varlık Tanımlayıcı (Entity Identifier)
 
-This usually corresponds to the table name but sometimes table names might have underscores or other invalid characters, so you decide what to name your entity in generated code (a valid identifier name).
+Bu genellikle tablo adına karşılık gelir fakat bazen tablo isimlerinde alt çizgi ya da C# için geçersiz karakterler olabilir. Bu nedenle üretilen kodda tablonuzu hangi isimle kullanmak istediğinize karar verebilirsiniz (geçerli bir C# tanımlayıcı olmak şartıyla).
 
-> Starting with Serene 1.6.2+ entity identifier is set automatically to a pascalized version of tablename.
+> Serene 1.6.2+ sonrasında entity identifier otomatik olarak tablo isminin Pascal (büyük harf ile başlayan küçük harfle devam eden) isimlendirmesine çevrilmiş bir haline ayarlanır.
 
-Our table name is *Movie* so it is also a valid and fine C# identifier, so let's use *Movie* as the entity identifier.
+Tablo ismimiz *Movie*, yani geçerli ve uygun bir C# tanımlayıcısı. Öyleyse *Movie* olarak kullanabiliriz.
 
-This name is also used in other class names. For example our page controller will be named *MovieController*.
-.
-It also determines the page url, in this sample our editing page will be at URL */MovieDB/Movie*.
+Bu isim ayrıca diğer sınıf isimlerinin belirlenmesinde de kullanılacak. Örneğin sayfa kontrolcümüz (page controller) *MovieController* olarak isimlendirilecek.
+
+Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş sayfamız  be at */MovieDB/Movie* adresinde olacak.
 
 
 ### Permission Key 
