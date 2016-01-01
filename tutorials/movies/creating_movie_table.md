@@ -142,3 +142,5 @@ Sql Server Management Studio ya da Visual Studio içinden *Connect To Database* 
 SQL öğe gezgininde (object explorer) *[mov].[Movies]* tablosunu görmelisiniz.
 
 Ayrıca, *[dbo].[VersionInfo]* tablosunun içindeki verilere baktığınızda, tablonun son satırında, Version kolonundaki değer *20150915185137*. Bu, belirtilen versiyon numarasına sahip migration'ın veritabanı üzerinde çalıştırılmış olduğunu garantiler.
+
+> Normalde her migration dan sonra bu kontrolleri yapmanız gerekmez. Burada kontrol ettirmemizin sebebi, ileride herhangi bir sorun yaşarsanız, nereye bakmanız gerektiğini anlatmaktır.
