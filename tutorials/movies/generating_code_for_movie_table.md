@@ -112,7 +112,7 @@ Solution'ı *TEKRAR DERLEYİN (REBUILD)* ve *F5* e basarak uygulamayı başlatı
 
 Kullanıcı adı olarak *admin*, şifre olarak *serenity* ile giriş yapın.
 
-Gösterge sayfasıyla karşılaştığınızda, sol taraftaki navigasyonun alt kısmında yeni bir bölüm (*MovieDB*) olduğunu farkedeceksiniz.
+Gösterge (Dashboard) sayfasıyla karşılaştığınızda, sol taraftaki navigasyonun alt kısmında yeni bir bölüm (*MovieDB*) olduğunu farkedeceksiniz.
 
 Tıklayıp genişletin ve *Movie* bağlantısına basıp ilk ürettiğimiz sayfamızı açın.
 
