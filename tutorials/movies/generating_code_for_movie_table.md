@@ -86,7 +86,7 @@ Tablo ismimiz *Movie*, yani geçerli ve uygun bir C# tanımlayıcısı. Öyleyse
 
 Bu isim ayrıca diğer sınıf isimlerinin belirlenmesinde de kullanılacak. Örneğin sayfa kontrolcümüz (page controller) *MovieController* olarak isimlendirilecek.
 
-Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş sayfamız  be at */MovieDB/Movie* adresinde olacak.
+Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş sayfamız  be at *~/MovieDB/Movie* adresinde olacak.
 
 
 ### Permission Key 
