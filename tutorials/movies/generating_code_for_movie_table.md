@@ -110,22 +110,24 @@ Solution'ı *TEKRAR DERLEYİN (REBUILD)* ve *F5* e basarak uygulamayı başlatı
 
 > Bir diğer seçenek, proje bağımlılığı eklemektir. Script projesinin de Web projesi çalıştırıldığında derlenmesi için, MovieTutorial.Web projesine sağ tıklayın, *Build Dependencies (Derleme Bağımlılıkları) -> Project Dependencies (Proje Bağımlılıkları)* nı seçin ve *Dependencies (Bağımlılıklar)* sekmesi altındaki *MovieTutorial.Script* i işaretli hale getirin.
 
-Use *admin* as username, and *serenity* as password to login.
+Kullanıcı adı olarak *admin*, şifre olarak *serenity* ile giriş yapın.
 
-When you are greeted with Dashboard page, you will notice that there is a new section, *MovieDB* on the bottom of left navigation. 
+Gösterge sayfasıyla karşılaştığınızda, sol taraftaki navigasyonun alt kısmında yeni bir bölüm (*MovieDB*) olduğunu farkedeceksiniz.
 
-Click to expand it and click Movie to open our first generated page.
+Tıklayıp genişletin ve *Movie* bağlantısına basıp ilk ürettiğimiz sayfamızı açın.
 
-![Movies First Generation](img/movies_first_generation.png)
+![Filmler Sayfası İlk Üretim](img/movies_first_generation.png)
 
-Now try adding a new movie, than try updating and deleting it.
+Şimdi bir film ekleyip, sonra güncellemeyi ve silmeyi deneyin.
 
-Sergen generated code for our table, and it just works without writing a single line of code.
+Sergen'in tablomuz için üretmiş olduğu arayüz, bir satır kod yazmadan çalışır durumda.
 
-> This doesn't mean i don't like writing code. In contrast, i love it. Actually i'm not a fan of most designers and code generators. The code they produce is usually unmanagable mess. 
+> Bu kod yazmaktan hoşlanmadığım şeklinde anlaşılmamalı, tam aksine! Aslında, çoğu tasarım aracı ve kod üreticinin hayranı sayılmam. Genellikle ürettikleri kod, yönetilmesi imkansız bir kargaşadır. 
 
-> Sergen just helped us here for initial setup which is required for layered architecture and platform standards. We would have to create about 10 files for entity, repository, page, endpoint, grid, form etc. Also we needed to do some setup in a few other places.
+> Sergen, sadece ilk kurulumu yapmamıza yardımcı oldu. Bu katmanlı mimari ve platform standartları açısından gereklidir. Aksi durumda, bizim entity, repository, sayfa, servis bağlantı noktası, grid, form vs. için 10 civarında dosyayı manuel olarak oluşturmamız gerekecekti. Artı birkaç başka yerlerde de ayarlamalar yapmamız lazımdı.
 
-> Even if we did copy paste and replace code from some other page, it would be error prone and take about 5-10 mins.
+> Bir başka tablonun kodlarını kopyala yapıştır ile alıp değiştirsek bile bu işlemleri bitirmemiz en azından 5-10 dk alır.
 
-> The code files Sergen generates has minimum code with the absolute basics. This is thanks to the base classes in Serenity that handles the most logic. Once we generate code for some table, we'll probably never use Sergen again (for this table), and modify this generated code to our needs. We'll see how.
+> Sergen'in ürettiği kod dosyaları, olabilecek en temel yapıda ve minimum kod içermektedir. Bu Serenity'deki işin büyük kısmını halleden baz sınıfların sayesindedir. 
+
+> Bir tablo için kod ürettikten sonra, aynı tablo için Sergen'i bir daha kullanmayacağız ve üretilmiş kodu ihtiyacımza göre düzenleyeceğiz (diğer kod üreticilerden farklı olarak).
