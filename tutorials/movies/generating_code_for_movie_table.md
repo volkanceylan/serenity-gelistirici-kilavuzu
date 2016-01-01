@@ -38,9 +38,9 @@ Proje konumlarının belirlenmesi önemlidir, çünkü Sergen üreteceği dosyal
 
 ### Kök İsim Alanı (Root Namespace) Seçeneği
 
-Set root namespace option to the Solution name you used, e.g. *MovieTutorial*. If your project names are MyProject.Web and MyProject.Script, your root namespace is MyProject by default. This is critical so make sure you don't set it to anything different, as by default, Serene template expects all generated code to be under this root namespace.
+Bu seçeneği, kullanmış olduğunuz Solution ismine göre belirleyin, ör. *MovieTutorial*. Eğer proje isimleriniz MyProject.Web ve MyProject.Script ise kök isim alanınız MyProject'dir. Bu kritik önem arzeder, bu yüzden farklı birşeye ayarlamadığınızdan emin olunuz. Çünkü Serene şablonu üretilen tüm kodun bu kök isim alanı (root namespace) altında olduğunu varsayar.
 
-This option is also saved, so next time you won't have to fill it in.
+Bu seçenek te saklandığından, bir sonraki sefer tekrar doldurmanız gerekmez.
 
 
 ### Choosing Connection String
