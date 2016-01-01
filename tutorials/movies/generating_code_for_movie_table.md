@@ -48,27 +48,27 @@ Bu seçenek te saklandığından, bir sonraki sefer tekrar doldurmanız gerekmez
 Web proje ismi belirlendiğinde, Sergen bağlantı açılır listesini web.config dosyanızdan okuduğu bağlantı dizeleriyle doldurur. Burada, *Default* ve *Northwind* bağlantıları olmalı. *Default* olanı seçelim.
 
 
-### Selecting Table To Generate Code For
+### Kod Üretilecek Tablonun Belirlenmesi
 
-Sergen generates code for one table at a time. Once we choose connection string, table dropdown is populated with table names from that database. 
+Sergen tek seferde tek tablo için kod üretebilir. Bağlantı dizesini seçtiğimizde,  o veritabanındaki tablo isimleri listeye getirilir.
 
-Select *Movie* table.
+*mov.Movie* tablosunu seçin.
 
-### Setting Module Name
+### Modül Adının Belirlenmesi
 
-In Serenity terms, a module is a logical group of pages, sharing a common purpose. 
+Serenity açısından, modül, ortak bir amacı paylaşan sayfalardan oluşan mantıksal bir gruptur. 
 
-For example, in Serene template, all pages related to *Northwind* sample belongs to *Northwind* module. 
+Örneğin, Serene şablonunda, *Northwind* örneğiyle ilgili tüm sayfalar *Northwind* modülüne dahildir. 
 
-Pages that are related to general management of site, like users, roles etc. belongs to *Administration* module. 
+Sitenin genel yönetimiyle ilgili sayfalar, örneğin kullanıcılar, roller vs. ise *Administration (Sistem Yönetimi)* modülündedir. 
 
-A module usually corresponds to a database schema, or a single database but there is nothing that prevents you from using multiple modules in a single database / schema, or opposite, multiple databases in one module.
+Bir modül, genellikle bir veritabanı şeması ya da ayrı bir veritabanına karşılık gelir. Fakat tek şema/veritabanında birden fazla modül ya da tam tersi, bir modül ile birden fazla veritabanı kullanmanıza bir engel yoktur.
 
-For this tutorial, we will use *MovieDB* (analogous to IMDB) for all pages.
+Bu öğretici için, tüm sayfalarda *MovieDB* (IMDB benzeri) modül adı kullanacağız.
 
-Module name is used in determining namespace and url of generated pages.
+Modül adı oluşturulan sayfaların isim alanı (namespace) ve URL lerinin belirlenmesinde kullanılmaktadır.
 
-For example, our new page will be under *MovieTutorial.MovieDB* namespace and will use */MovieDB* relative url.
+Örneğin, yeni üreteceğimiz sayfa, *MovieTutorial.MovieDB* isim alanı altında olacak ve *~/MovieDB/Movie* relatif URL'ine sahip olacak.
 
 
 ### ConnectionKey Parameter 
