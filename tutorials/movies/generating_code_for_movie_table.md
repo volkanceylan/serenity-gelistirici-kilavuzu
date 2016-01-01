@@ -86,14 +86,14 @@ Tablo ismimiz *Movie*, yani geçerli ve uygun bir C# tanımlayıcısı. Öyleyse
 
 Bu isim ayrıca diğer sınıf isimlerinin belirlenmesinde de kullanılacak. Örneğin sayfa kontrolcümüz (page controller) *MovieController* olarak isimlendirilecek.
 
-Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş sayfamız  be at *~/MovieDB/Movie* adresinde olacak.
+Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş sayfamız be at *~/MovieDB/Movie* adresinde olacak.
 
 
-### Permission Key 
+### İzin Anahtarı (Permission Key)
 
-In Serenity, access control to resources (pages, services etc.) are controlled by permission keys which are simple strings. Users or roles are granted these permissions.
+Serenity'de kaynaklara erişim (sayfalar, servisler vs.), basit dizeler (string) olan izin anahtarları ile kontrol edilir. Kullanıcı ve rollere bu izinler verilir.
 
-Our Movie page will be only used by administrative users (or maybe later content moderators) so let's set it to *Administration* for now. By default, in Serene template, only the *admin* user has this permission.
+Şu an için Movie sayfamız sadece sistem yöneticileri tarafından kullanılabilecek (daha sonra içerik moderatörlerine çevrilebilir). Bu yüzden izin olarak *Administration:General* belirleyelim. Varsayılan olarak, Serene şablonunda sadece *admin* kullanıcısı bu hakka sahiptir.
 
 
 ### Generating Code for First Page
