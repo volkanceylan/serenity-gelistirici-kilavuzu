@@ -68,7 +68,7 @@ Bu öğretici için, tüm sayfalarda *MovieDB* (IMDB benzeri) modül adı kullan
 
 Modül adı oluşturulan sayfaların isim alanı (namespace) ve URL lerinin belirlenmesinde kullanılmaktadır.
 
-Örneğin, yeni üreteceğimiz sayfa, *MovieTutorial.MovieDB* isim alanı altında olacak ve *~/MovieDB/Movie* relatif URL'ine sahip olacak.
+Örneğin, yeni üreteceğimiz sayfa, *MovieTutorial.MovieDB* isim alanı altında olacak ve *~/MovieDB/Movie* relatif URL'inde bulunacak.
 
 
 ### ConnectionKey Parameter 
