@@ -2,7 +2,7 @@
 # Film Arayüzünün Özelleştirilmesi
 
 
-### Customizing Field Captions
+### Alan Başlıklarının Değiştirilmesi
 
 In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but in its title there is no sign of this. Let's change its title to Runtime (mins).
 
