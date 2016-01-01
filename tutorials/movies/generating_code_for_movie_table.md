@@ -93,7 +93,7 @@ Ayrıca sayfa adresimizde bu isimden belirlenecek. Bu örnekle listeleme/giriş 
 
 Serenity'de kaynaklara erişim (sayfalar, servisler vs.), basit dizeler (string) olan izin anahtarları ile kontrol edilir. Kullanıcı ve rollere bu izinler verilir.
 
-Şu an için Movie sayfamız sadece sistem yöneticileri tarafından kullanılabilecek (daha sonra içerik moderatörlerine çevrilebilir). Bu yüzden izin olarak *Administration:General* belirleyelim. Varsayılan olarak, Serene şablonunda sadece *admin* kullanıcısı bu hakka sahiptir.
+Şu an için Movie sayfamız sadece sistem yöneticileri tarafından kullanılabilecek (daha sonra içerik moderatörlerine çevrilebilir). Bu yüzden izin olarak *Administration:General* belirleyelim. Varsayılan olarak, Serene şablonunda sadece *admin* kullanıcısı bu izne sahiptir.
 
 
 ### Generating Code for First Page
