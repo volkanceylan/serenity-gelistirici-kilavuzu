@@ -130,4 +130,4 @@ Sergen'in tablomuz için üretmiş olduğu arayüz, bir satır kod yazmadan çal
 
 > Sergen'in ürettiği kod dosyaları, olabilecek en temel yapıda ve minimum kod içermektedir. Bu Serenity'deki işin büyük kısmını halleden baz sınıfların sayesindedir. 
 
-> Bir tablo için kod ürettikten sonra, aynı tablo için Sergen'i bir daha kullanmayacağız ve üretilmiş kodu ihtiyacımza göre düzenleyeceğiz (diğer kod üreticilerden farklı olarak).
+> Bir tablo için kod ürettikten sonra, aynı tablo için Sergen'i bir daha kullanmayacağız ve üretilmiş kodu ihtiyacımza göre düzenleyeceğiz (diğer kod üreticilerden farklı olarak). Nasıl yapılacağına önümüzdeki bölümlerde bakacağız.
