@@ -4,13 +4,15 @@
 
 ### Alan Başlıklarının Değiştirilmesi
 
-In our movie grid and form, we have a field named *Runtime*. This field expects an integer number in *minutes*, but in its title there is no sign of this. Let's change its title to Runtime (mins).
+Film grid'i ve formumuzda, *Runtime (Süre)* isimli bir alanımız bulunuyor. Bu alan, dakika (minutes) cinsinden bir tamsayı girilmesini bekliyor fakat bu bilgi başlığından anlaşılamıyor. Daha açıklayıcı olması açısından *Runtime (mins)* yani olarak değiştirelim.
 
-There are several ways to do this. Our options include server side form definition, server side columns definition, from script grid code etc. But let's make this change in the central location, the entity itself, so its title changes everywhere.
+> Kolon başlığını *Süre (dk)* olarak da değiştirebilirdik, ancak örneklerin ingilizce kılavuz ile senkronize gitmesini istediğimizden, terimleri aynı şekilde kullanıyoruz.
 
-When Sergen generated code for Movie table, it created a entity class named MovieRow. You can find it at  *MovieTutorial.Web/Modules/MovieDB/Movie/MovieRow.cs*.
+Bunu yapmak için birden fazla yöntem mevcut. Seçeneklerimiz içinde sunucu tarafı form tanımı, sunucu tarafı kolon tanımları, istemci tarafında grid kodundan direk değiştirmek vs. bulunuyor. Ama en iyisi bunu merkezi noktadan, yani entity (row) tanımından yapmak, bu şekilde alan başlığı heryerde değişecektir.
 
-Here is an excerpt from its source with our Runtime property:
+Sergen, Movie tablomuz için kod ürettiğinde, MovieRow isimli bir entity sınıfı da oluşturdu. Dosyayı *MovieTutorial.Web/Modules/MovieDB/Movie/MovieRow.cs* konumunda bulabilirsiniz.
+
+Altta, Runtime özelliği (property) için bu dosyadan bir alıntı bulunmakta:
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -32,7 +34,7 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-We'll talk about entities (or rows) later, let's now focus on our target and change its DisplayName attribute value to *Runtime (mins)":
+Entity (ya da row) yapılarına daha sonra değineceğiz. Şu an için hedefimize odaklanalım ve property'nin DisplayName niteliğini *Runtime (mins)" olarak değiştirelim:
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -54,19 +56,18 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Now build solution and run application. You'll see that field title is changed in both grid and dialog. 
+Şimdi solution'ı derleyin ve uygulamayı çalıştırın. Alan başlığının hem grid hem de diyalogta değişmiş olduğunu göreceksiniz.
 
-> Column title has "..." in it as column is not wide enough, though its hint shows the full title. We'll see how to handle this soon.
+> Kolon başlığında "..." bulunmasının nedeni, yeterince geniş olmaması, ancak üzerine gelince hint (ipucu) olarak tam başlık ta görüntüleniyor. Bunu nasıl çözeceğimize de az sonra bakacağız.
 
-![Movies Runtime (Mins)](img/movies_runtime_mins.png)
-
-
-### Overriding Column Title and Width 
+![Filmler Runtime Kolonu (Dk)](img/movies_runtime_mins.png)
 
 
-So far so good, what if we wanted to show another title in grid (columns) or dialog (form). We can override it corresponding definition file.
+### Kolon Başlık ve Genişliğinin Ezilmesi
 
-Let's do it on columns first. Next to *MovieRow.cs*, you can find a source file named *MovieColumns.cs*:
+Şimdilik herşey iyi gibi, peki ya grid kolonlarında başka formda başka bir başlık göstermek isteyeseydik ne yapacaktık? Elbette karşılık gelen dosyada bu niteliği ezebiliriz.
+
+Öncelikle kolonlarda yapalım. *MovieRow.cs* dosyasının yanında, *MovieColumns.cs* kaynak dosyasını bulabilirsiniz:
 
 ```cs
 namespace MovieTutorial.MovieDB.Columns
@@ -85,11 +86,11 @@ namespace MovieTutorial.MovieDB.Columns
 }
 ```
 
-You may notice that this columns definition is based on the Movie entity (BasedOnRow attribute).
+Farkettiyseniz, bu kolon tanımlamaları, Movie (film) entity'sini baz alıyor (BasedOnRow niteliğiyle).
 
-Any attribute written here will override attributes defined in the entity class.
+Burada yazılabilecek her türlü nitelik, entity sınıfında tanımlanmış nitelikleri ezecektir.
 
-Let's add a DisplayName attribute to the *Runtime* property:
+*Runtime* property'sine bir *DisplayName* niteliği ekleyelim:
 
 ```cs
 namespace MovieTutorial.MovieDB.Columns
@@ -109,30 +110,30 @@ namespace MovieTutorial.MovieDB.Columns
 }
 ```
 
-Now we set column caption to "Runtime in Minutes". 
+Şimdi kolon başlığını, formdan farklı olarak "Runtime in Minutes" olarak değiştirdik. 
 
-We actually added two more attributes. 
+Ayrıca, iki nitelik daha ekledik.
 
-One to override column width to 150px.
+Biri, kolon genişliğini 150 piksele çıkarmak için.
 
-> Serenity applies an automatic width to columns based on field type and character length, unless you set the width explicitly.
+> Serenity, siz manuel belirlemezseniz, kolon genişliklerini alan tipleri ve karakter uzunluklarını göz önüne alarak, otomatik olarak tespit eder.
 
-And another one to align column to right (AlignCenter, AlignLeft is also available).
+Bir diğeri de kolon metnini sağa yaslamak için (AlignCenter (ortala), AlignLeft (sola yasla) nitelikleri de kullanılabilir).
 
-Let's build and run again, than we get: 
+Tekrar derleyip çalıştıralım, şimdi görünüm şöyle oldu:
 
 ![Movies Runtime Column](img/movies_runtime_column.png)
 
-Form field title stayed same, while column title changed.
+Form başlığı aynı kalırken, kolon başlığı ve görünümü değişti.
 
-> If we wanted to override form field title instead, we would do similar steps in MovieForm.cs
+> Eğer form başlığını ezmek isteseydik, benzer adımları MovieForm.cs dosyasındaki tanımlamalarda uygulayacaktık.
 
 
-### Changing Editor Type For Description and Storyline
+### Description (Açıklama) ve Storyline (Senaryo) Editör Tiplerininin Değiştirilmesi
 
-Description and Storyline fields can be a bit longer compared to Title field, so lets change their editor types to a textarea.
+Description ve Storyline alanları, Title (başlık) alanına göre biraz daha uzun olabilir. O yüzden editör tiplerini textarea (çok satırlı metin) olarak değiştirelim.
 
-Open *MovieForm.cs* in the same folder with *MovieColumns.cs* and *MovieRow.cs*.
+*MovieColumns.cs* ile aynı klasördeki *MovieForm.cs* dosyasını açın:
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -152,7 +153,7 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-and add TextAreaEditor attributes to both:
+ve iki property'ye de TextAreaEditor niteliğini uygulayın:
 
 ```cs
 namespace MovieTutorial.MovieDB.Forms
@@ -174,23 +175,23 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-I left more editing rows for Storyline (8) compared to Description (3) as Storyline should be much longer.
+Description'a göre (3), Storyline daha uzun olabileceği için biraz daha fazla satır (8) ayarladım.
 
-After rebuild and run, we have this:
+Derleyip çalıştırdıktan sonra şu görünümdeyiz:
 
-![Movies TextArea Editors](img/movies_textarea_editors.png)
+![Filmler TextArea Editörleri](img/movies_textarea_editors.png)
 
-Serene has several editor types to choose from. Some are automatically picked based on field data type, while you need to explicitly set others.
+Serene, çeşitli editör tiplerine sahiptir. Bunlardan bazıları alan veri tipine göre otomatik belirlenirken, istediklerinizi siz özel (explicit) olarak seçebilirsiniz.
 
-> You can also develop your own editor types. You can take existing editor types as base classes, or develop your own from stratch. We'll see how in following chapters.
+> Kendi editör tiplerinizi geliştirmeniz de mümkün. Mevcut editörlerden birini baz alabilir, ya da sıfırdan kendi editörlerinizi yazabilirsiniz. Nasıl olacağına ilerleyen bölümlerde değineceğiz.
 
-As editors became a bit higher, form height exceeded the default Serenity form height (which is set by Sergen to 260px) and now we have a vertical scroll bar. Let's remove it.
+Editörler biraz yükseklik açısından büyüdüğünden, form yüksekliği varsayılan Serenity form yüksekliğini aştı (Sergen başlangıçta 260px olarak belirler) ve şimdi bir dikey kaydırma çubuğumuz var. Onu ortadan kaldıralım.
 
-### Setting Initial Dialog Size With CSS (Less)
+### CSS (Less) ile İlk Diyalog Yüksekliğinin Ayarlanması
 
-Sergen generated some CSS for our movie dialog in *MovieTutorial.Web/Content/site/site.less* file.
+Sergen, film diyaloğumuz için *MovieTutorial.Web/Content/site/site.less* dosyasında bazı CSS stilleri oluşturdu.
 
-If you open it, and scroll to bottom, you will see this:
+Eğer dosyayı açıp, sonuna giderseniz, şunu göreceksiniz:
 
 ```cs
 /* ------------------------------------------------------------------------- */
@@ -204,17 +205,17 @@ If you open it, and scroll to bottom, you will see this:
 }
 ```
 
-You can safely remove the 3 comment lines (appended by code generator...). This is just a reminder for you to move them to a better place like a *site.movies.less* file specific to this module (recommended).
+Rahatça ilk 3 yorum satırını silebilirsiniz (appended by code generator...). Bu sadece, üretilen bu satırları daha uygun bir yere, örneğin bu modüle özel oluşturacağınız bir   *site.movies.less* taşımanız için bir hatırlatma (stilleri modüllere ayırmanız önerilir).
 
-These rules are applied to elements with *.s-MovieDialog* class. Our Movie dialog has this class by default. 
+Buradaki kurallar, *.s-MovieDialog* CSS sınıfına sahip HTML elemanlarına uygulanır. Bizim Movie diyaloğumuz varsayılan olarak bu sınıfa sahiptir.
 
-In the second line it is specified that this dialog is 650px wide (and also its minimum width is 650px, this will get some meaning after we make this dialog resizable).
+İkinci satırda, diyaloğun 650px genişliğinde olacağı (aynı zamanda minimum 650px olacağını da belirtiyor, fakat bu, diyaloğu boyutlanabilir yaptığımızda anlam kazanacak).
 
-In third line, we specify that dialog height should be automatic (@h: auto), field labels should be 150px (@l: 150px) and editors should be 400px in width (@e: 400px).
+Üçüncü satırda, diyalog yüksekliğinin otomatik (@h: auto), alan başlıklarının 150px (@l: 150px), ve editörlerin de 400px genişliğinde (@e: 400px) olmasını istediğimizi belirtiyoruz.
 
-We are using several less mixins here (widthAndMin and dialog-styles).
+Burada bazı less yardımcılarından (mixin) faydalandık (widthAndMin and dialog-styles).
 
-Our form height is controlled by *s-PropertyGrid .categories { height: 260px; }* line. Let's change it to 400px so it won't require a vertical scroll bar.
+Form yüksekliğimiz *s-PropertyGrid .categories { height: 260px; }* satırı ile kontrol ediliyor. Onu 400px olarak değiştirelim ki dikey kaydırma çubuğu (scroll bar) gerekmesin.
 
 ```css
 .s-MovieDialog {
@@ -225,11 +226,11 @@ Our form height is controlled by *s-PropertyGrid .categories { height: 260px; }*
 ```
 
 
-### Changing Page Title
+### Sayfa Başlığının Değiştirilmesi
 
-Our page has title of *Movie*. Let's change it to Movies. 
+Sayfamızın başlığı *Movie* olarak gözüküyor. *Movies* yapalım.
 
-Open *MovieRow.cs* again. 
+*MovieRow.cs* tekrar açın. 
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
@@ -243,11 +244,11 @@ namespace MovieTutorial.MovieDB.Entities
         public Int32? MovieId
 ```
 
-Change DisplayName attribute value to *Movies*. This is the name that is used when this table is referenced, and it is usually a plural name. This attribute is used for determining default page title. 
+*DisplayName* nitelik değerini *Movies* olarak değiştirin. Bu, tablonun isimlendirmesi olarak kullanılır ve genellikle çoğuldur. Bu metin sayfa başlığını da belirler. 
 
-> It is also possible to override the page title in *MoviePage.Index.cshtml* file but as before, we prefer to do it from a central location so that this information can be reused in other places.
+> *MoviePage.Index.cshtml* dosyasından da sayfa başlığını özel olarak değiştirebilirsiniz, ancak bu bilginin diğer noktalarda da kullanılabilmesi için merkezi yerden düzenlenmesini tercih ediyoruz.
 
-InstanceName corresponds to singular name and is used in New Record (New Movie) button of the grid and determines the dialog title (e.g. Edit Movie).
+*InstanceName (Örnek İsmi)* ise tekil isme karşılık gelir ve grid'in New Record (Yeni Film) düğmesiyle, diyalog başlığını belirlemek için kullanılır (ör. Edit Movie (Film Düzenle)).
 
 ```cs
 namespace MovieTutorial.MovieDB.Entities
