@@ -1,4 +1,4 @@
-# Film Navigasyon Bağlantılarının Düzenlenmesi
+# Film Navigasyonunun Ele Alınması
 
 ### Setting Navigation Item Title and Icon
 
