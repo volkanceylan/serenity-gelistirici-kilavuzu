@@ -1,4 +1,4 @@
-# Handing Movie Navigation
+# Film Navigasyon Bağlantılarının Düzenlenmesi
 
 ### Setting Navigation Item Title and Icon
 
