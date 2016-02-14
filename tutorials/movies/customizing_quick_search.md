@@ -20,7 +20,7 @@ Sergen, varsayılan olarak tablonun ilk metinsel alanını *isim alanı (name fi
 
 > İsim alanı ayrıca ilk sıralamaları belirler ve diyalog başlıklarında görüntülenir. 
 
-Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
+Bazen tablonun ilk alanı isim alanı olmayabilir. Eğer başka bir alana değiştirmek isterseniz, bunu *MovieRow.cs* içerisinde yapabilirsiniz:
 
 ```cs
 
@@ -37,9 +37,9 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Code generator determined that first textual (string) field in our table is Title. So it added a INameRow interface to our Movies row and implemented it by returning Title field. If wanted to use Description as name field, we would just replace it.
+Kod üretici tablomuzdaki ilk metinsel (string) alanın *Title* olduğunu tespit etti. Bu nedenle, *MovieRow* umuza, *INameRow* arayüzünü ekledi ve bu arayüzü *Title* alanını döndürerek sağladı. Eğer *Description (Açıklama)* alanını isim olarak kullanmak isteseydi, *Title* yerine *Description* yazabilirdik.
 
-Here, *Title* is actually the name field, so we leave it as is. But we want Serenity to search also in *Description* and *Storyline* fields. To do this, you need to add *QuickSearch* attribute to these fields too, as shown below:
+Bu tabloda, *Title* zaten isim alanıdır, bu nedenle şimdilik olduğu gibi bırakıyoruz. Fakat, Serenity'nin *Description* ve *Storyline* alanlarında da hızlı arama yapmasını istiyoruz. Bunun için de, bu alanlara da *QuickSearch (Hızlı Arama)* niteliğini eklememiz gerekiyor:
 
 ```
 namespace MovieTutorial.MovieDB.Entities
@@ -73,13 +73,13 @@ namespace MovieTutorial.MovieDB.Entities
 }
 ```
 
-Now, if we search for *Gandalf*, we'll get a *The Lord of the Rings* entry:
+Eğer şimdi *Gandalf* kelimesini ararsak, *The Lord of the Rings (Yüzüklerin Efendisi)* kaydını da bulacağız:
 
 ![Movies Search Gandalf](img/movies_search_gandalf.png)
 
-QuickSearch attribute, by default, searches with *contains* filter. It has some options to make it match by *starts with* filter or match only exact values.
+QuickSearch niteliği varsayılan olarak *contains (içerir)* filtresiyle arar. Ayrıca *starts with (ile başlar)* ya da tam metinle aramak için de bazı seçenekleri bulunmaktadır.
 
-If we wanted it to show only rows that *starts with* typed text, we would change attribute to:
+Eğer sadece aranan kelime *ile başlayan* kayıtları göstermesini isteseydik, şu şekilde yapabilirdik:
 
 ```cs
 [DisplayName("Title"), Size(200), NotNull, QuickSearch(SearchType.StartsWith)]
@@ -90,9 +90,9 @@ public String Title
 }
 ```
 
-> Here this quick search feature is not very useful, but for values like SSN, serial number, identification number, phone number etc, it might be.
+> Bu hızlı arama örnekte çok kullanışlı değil ama kimlik numarası, seri numarası, telefon numarsaı gibi farklı veri türleri için faydalı olabilir.
 
-If we wanted to search also in year column, but only exact integer values (1999 matches but not 19):
+Eğer, ayrıca yıl kolonunda da arama yapılmasını, ancak tam eşleşen sayısal değerlerin bulunmasını isteseydik (1999 olarak aranırsa eşlecek ama sadece 19 yazılırsa sonuç bulmayacak):
 
 ```
 [DisplayName("Year"), QuickSearch(SearchType.Equals, numericOnly: 1)]
@@ -103,11 +103,11 @@ public Int32? Year
 }
 ```
 
-> You might have noticed that we are not writing any C# or SQL code for these basic features to work. We just specify what we want, rather than how to do it. This is what declarative programming is. 
+> Bu temel özelliklerin çalışması için herhangi bir C# ya da SQL kodu yazmadığımızı farketmiş olmalısınız. Sadece ne istediğimizi belirtiyoruz, nasıl yapılacağını değil. Bu *deklaratif programlama* desenidir.
 
-It is also possible to provide user with ability to determine which field she wants to search on.
+Şu an *QuickSearch* niteliği olan bütün alanlarda aynı anda arama yapılıyor. Kullanıcının, bu alanlardan hangisinde arama yapmak istediğine kendisinin karar verebilmesi de mümkün:
 
-Open *MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs* and modify it like:
+*MovieTutorial.Script/MovieDB/Movie/MovieGrid.cs* dosyasını açıp şunun gibi düzenleyin:
 
 ```
 
@@ -136,23 +136,22 @@ namespace MovieTutorial.MovieDB
 }
 ```
 
-Now we have a dropdown in quick search input:
+Şimdi hızlı arama kutucuğunda ek olarak bir çekme menümüz mevcut:
 
-![Movies Quick Search Fields](img/movies_quick_fields.png)
+![Filmler Hızlı Arama Alanları](img/movies_quick_fields.png)
 
-> Unlike prior samples where we modified Server side code, this time we did changes in Script side, and actually modified javascript code.
+> Sunucu tarafı kodlarını düzenlediğimiz daha önceki örneklerimizden farklı olarak, bu sefer Script projesinde değişiklikler yaptık ve aslında javascript kodlarını düzenlemiş olduk.
 
 
+### T4 Şablonlarının Çalıştırılması (.tt uzantılı dosyalar)
 
-### Running T4 Templates (.tt files)
+Örneğimizde, alan isimlerini *"Description"*, *"Storyline"* gibi string olarak kodladık. Bu tip durumlar eğer alan isimlerini yanlış hatırlarsak, hata yapmaya meğillidir.
 
-In prior sample we harcoded field names like *Description*, *Storyline* etc. This may lead to typing errors if we forgot actual property names at server side.
+Serene, bu tür bilgileri sunucu tarafından (row lar vs.) istemci tarafına, intellisense amacıyla taşıyabilmek için bazı T4 (.tt) şablon dosyaları içerir.
 
-Serene contains some T4 (.tt) files to transfer such information from server side (rows etc) to client side for intellisense purposes.
+Bu şablonları çalıştırmadan önce, solution ın başarılı bir şekilde derlendiğinden emin olunuz. Çünkü şablonlar kod üretmek için derleme çıktıları olan DLL dosyalarınızı (*MovieTutorial.Web.dll*, *MovieTutorial.Script.dll*) kullanmaktadır.
 
-Before running these templates, please make sure that your solution builds successfully as templates uses your output DLL files (*MovieTutorial.Web.dll*, *MovieTutorial.Script.dll*) to generate code.
-
-After building your solution, click on *Build* menu, than *Transform All Templates*.
+Solution'ı derledikten sonra *Build (Derleme)* menüsüne tıklayın ve ardından *Transform All Templates (Tüm Şablonları Dönüştür)*'e tıklayın.
 
 > If you are using a Serene version before 1.6.0, you might get an error like following:
 
