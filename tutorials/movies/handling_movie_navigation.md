@@ -1,10 +1,10 @@
 # Film Navigasyonunun Ele Alınması
 
-### Setting Navigation Item Title and Icon
+### Navigasyon Elemanının Yerelleştirilmesi
 
-When Sergen generated code for Movie table, it also created a navigation item entry. In Serene, navigation items are created with special assembly attributes.
+Sergen, *Movie* tablosu için kod ürettiğinde, ayrıca navigasyon için de bir eleman girdisi oluşturdu. Serene'de navigasyon elemanları özel assembly nitelikleri (attribute) ile tanımlanır.
 
-Open *MoviePage.cs* in the same folder, on top of it you'll find this line:
+Aynı klasördeki *MoviePage.cs* dosyasını açınca üst bölümünde aşağıdaki satırı bulacaksınız:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "MovieDB/Movie", 
@@ -17,11 +17,11 @@ namespace MovieTutorial.MovieDB.Pages
 
 ```
 
-First argument to this attribute is display order for this navigation item. As we only have one navigation item in Movie category yet, we don't have to mess with ordering yet.
+Bu niteliğin ilk argümanı gösterileceği sırayı belirler. *Movie* kategorisinde tek bir elemanımız olduğu için şimdilik sıralamayla uğraşmamıza gerek yok.
 
-Second parameter is navigation title in "Section Title/Link Title" format. Section and navigation items are seperated with a slash (/).
+İkinci argüman, "Bölüm Başlığı/Bağlantı Başlığı" formatında navigasyon başlığıdır. Bölüm ve navigasyon elemanları düz bölü (/ - slash) ile birbirinden ayrılır.
 
-Lets change it to *Movie Database/Movies*.
+Başlığı *Movie Database/Movies* olarak değiştirelim.
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
@@ -33,9 +33,9 @@ namespace MovieTutorial.MovieDB.Pages
 //..
 ```
 
-![Navigation Item Title and Icon](img/movies_navigation_links.png)
+![Navigation Elemanı Başlık ve İkonu](img/movies_navigation_links.png)
 
-We also changed navigation item icon to *icon-camcorder*. Serene template has two sets of font icons, Simple Line Icons and Font Awesome. Here we used a glyph from simple line icons set. 
+Ayrıca navigasyon elemanının ikonunu da *icon-camcorder* olarak değiştirdik. Serene şablonunda iki ikon fontu bulunur, *Simple Line Icons* ve *Font Awesome*. Burada basit çizgi ikonları setinden bir kod kullandık. 
 
 To see list of simple line icons and their css classes, visit link below:
 
