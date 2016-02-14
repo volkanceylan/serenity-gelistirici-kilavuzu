@@ -1,5 +1,5 @@
 
-# Customizing Quick Search
+# Hızlı Aramanın Özelleştirilmesi
 
 ### Adding Several Movie Entries
 
