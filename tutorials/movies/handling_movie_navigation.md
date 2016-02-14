@@ -37,33 +37,33 @@ namespace MovieTutorial.MovieDB.Pages
 
 Ayrıca navigasyon elemanının ikonunu da *icon-camcorder* olarak değiştirdik. Serene şablonunda iki ikon fontu bulunur, *Simple Line Icons* ve *Font Awesome*. Burada basit çizgi ikonları setinden bir kod kullandık. 
 
-To see list of simple line icons and their css classes, visit link below:
+Bu ikonlar ve css sınıflarının bir listesini görmek için aşağıdaki bağlantıyı ziyaret edilebilir:
 
 http://thesabbir.github.io/simple-line-icons/
 
-FontAwesome is available here:
+FontAwesome ise şurada bulunmaktadır:
 
 https://fortawesome.github.io/Font-Awesome/icons/
 
 
-### Ordering Navigation Sections
+### Navigasyon Bölümlerinin Sıralanması
 
-As our *Movie Database* section is auto generated last, it is displayed at the bottom of navigation menu.
+*Movie Database* bölümümüz en son üretildiğinden, navigasyon menüsünün en altında görüntüleniyor.
 
-We'll move it before Northwind menu.
+Bölümü, Northwind menüsünün altına taşıyacağız.
 
-As we saw recently, Sergen created a navigation item in *MoviePage.cs*. If navigation items are scattered through pages like this, it would be hard to see the big picture (list of all navigation items) and order them easily.
+Az önce gördüğümüz gibi, Sergen navigasyon elemanını *MoviePage.cs* içinde üretti. Eğer navigasyon elemanları bu şeklide sayfalar içinde dağınık durursa, büyük resmi (tüm navigasyon elemanlarının listesini) bir arada görmek ve kolayca sıralamak mümkün olmayacaktır.
 
-So we move it to our central location which is at *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs*.
+Bu nedenle, elemanı *MovieTutorial.Web/Modules/Common/Navigation/NavigationItems.cs* dosyasındaki merkezi konumumuza taşıyacağız, 
 
-Just cut the below lines from *MoviePage.cs*:
+*MoviePage.cs* dosyasından aşağıdaki satırları kesin:
 
 ```cs
 [assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Movie Database/Movies", 
     typeof(MovieTutorial.MovieDB.Pages.MovieController), icon: "icon-camrecorder")]
 ```
 
-Move it into *NavigationItems.cs* and modify it like this:
+*NavigationItems.cs* dosyasına taşıyıp aşağıdaki gibi düzenleyin:
 
 ```
 using Serenity.Navigation;
@@ -86,17 +86,17 @@ using MovieDB = MovieTutorial.MovieDB.Pages;
 // ...
 ```
 
-Here we also declared a navigation menu (Movie Database) with *film* icon. When you don't have an explicitly defined navigation menu, Serenity implicitly creates one, but in this case you can't order menu yourself, or set menu icon.
+Bu arada, bir de *film* ikonuna sahip yeni bir navigasyon menüsü (Movie Database) tanımladık. Açıkça tanımlanmış bir navigasyon menünüz olmadığında, Serenity dolaylı olarak bir tane oluşturur, fakat bu durumda menünün sırasını ya da ikonunu düzenleyemezsiniz.
 
-We assigned it a display order of *2000* so this menu will display just after Dashboard link (1000) but before Northwind menu (8000).
+Menüye gösterim sırası olarak *2000* atadık, yani *Dashboard* bağlantısından (1000) hemen sonra, aman Northwind (8000) menüsünden önce gözükecek.
 
-We assigned our *Movies* link a display order value of *2100* but it doesn't matter right now, as we have only one navigation item under *Movie Database* menu yet.
+*Movies* bağlantımıza ise gösterim sırası olarak *2100* atadık, ancak şimdilik bunun bir önemi yok, çünkü *Movie Database* altında tek bir menü elemanımız var.
 
-> First level links and navigation menus are sorted according to their display order first, then second level links among their siblings.
+> İlk seviye bağlantılar ve navigasyon menüleri öncelikle kendi aralarında gösterim sıra değerlerine göre sıralanır, ardından ikinci seviye bağantılar kardeşleri (siblings) arasında sıralanır.
 
-Here is how it looks like after these changes:
+Bu değişiklikten sonra şu şekilde gözükmeli:
 
-![Movie Database Moved](img/movies_navigation_moved.png)
+![Movie Database Menüsü Taşındı](img/movies_navigation_moved.png)
 
 
 ### Troubleshooting Some Issues with Visual Studio
