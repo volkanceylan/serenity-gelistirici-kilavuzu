@@ -117,4 +117,4 @@ Bu özelliği ayrıca web.config te yapılan bir ayar ile de kapatmak mümkün:
 </appsettings>
 ```
 
-> Serene 1.5.4 ve sonrası bu seçeneği varsayılan olarak web.config'te içerdiğinden, bahsi geçen sorunu yaşamamış olabilirsiniz.
+> Serene 1.5.4 ve sonrası bu seçeneği varsayılan olarak web.config'te içerdiğinden, bahsi geçen sorunu deneyimlememiş olabilirsiniz.
