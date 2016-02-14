@@ -99,17 +99,17 @@ Bu değişiklikten sonra şu şekilde gözükmeli:
 ![Movie Database Menüsü Taşındı](img/movies_navigation_moved.png)
 
 
-### Troubleshooting Some Issues with Visual Studio
+### Visual Studio ile Yaşanan Bazı Sorunların Çözülmesi
 
-In case you didn't notice already, Visual Studio doesn't let you modify code while your site is running. Also your site stops when you stop debugging, so you can't keep browser window open and refresh after rebuilding.
+Eğer hala farketmediyseniz, Visual Studio siteniz çalışırken kodunu düzenlemenize izin vermez. Hata ayıklamayı (debug) durdurduğunuzda ise sitenizde durur. Bu nedenle tarayıcı pencerenizi açık tutup, derleme sonrasında yenileyemezsiniz.
 
-To solve this issue, we need to disable *Edit And Continue* (have no idea why).
+Bu sorunu çözmek için, *Edit And Continue (Düzenle ve Devam Et)* özelliğini kapatmamız gerekmekte (nedendir bilinmez).
 
-Right Click *MovieTutorial.Web* project, click *Properties*, in the Web tab, uncheck *Enable Edit And Continue* under *Debuggers*.
+*MovieTutorial.Web* projesine sağ tuşla tıklayın, *Properties (Özellikler)* e tıklayın, Web sekmesinde, *Debugger (Hata Ayıklayıcı) altındaki *Enable Edit And Continue (Düzenle ve Devam Eti Etkinleştir)* seçeneğinin işaretini kaldırın.
 
-Also, on your site, top blue progress bar (which is a Pace.js animation), keeps running all the time like it is still loading something. It is thanks to the *Browser Link* feature of Visual Studio. To disable it, locate its button in Visual Studio toolbar that looks like a refresh button (next to play icon with browser name like Chrome), click dropdown and uncheck *Enable Browser Link*.
+Ayrıca, sayfanın tepesindeki mavi ilerleme çubuğu (ki bu bir Pace.js animasyonudur), sanki sürekli birşey yükleniyormuşcasına dönüp durur. Bu da Visual Studio'nun *Browser Link (Tarayıcı Bağlantısı)* özelliğinden kaynaklanmaktadır. Özelliği devre dışı bırakmak için, Visual Studio araç çubuğundaki yenile düğmesine benzer simgesini bulun (Chrome gibi bir tarayıcı ismi yazan çalıştırma düğmesinin hemen yanındaki), çekme menüye tıklayın ve *Enable Browser Link (Tarayıcı Bağlantısını Etkinleştir)* seçeneğinin işaretini kaldırın.
 
-It's also possible to disable it with a web.config setting 
+Bu özelliği ayrıca web.config te yapılan bir ayar ile de kapatmak mümkün: 
 
 ```xml
 <appsettings>
@@ -117,4 +117,4 @@ It's also possible to disable it with a web.config setting
 </appsettings>
 ```
 
-> Serene 1.5.4 and later will have this by default, so you might not experience this issue
+> Serene 1.5.4 ve sonrası bu seçeneği varsayılan olarak web.config'te içerdiğinden, bahsi geçen sorunu yaşamamış olabilirsiniz.
