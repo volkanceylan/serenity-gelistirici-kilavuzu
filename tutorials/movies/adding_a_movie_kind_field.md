@@ -1,10 +1,11 @@
-# Adding a Movie Kind Field
+# Film Tipi Alanının Eklenmesi
 
-If we wanted to also keep TV series and mini series in our movie table, we would need another field to store it: *MovieKind*.
+Eğer sinema filmleri ile birlikte diziler ve mini dizileri de *Movie* tablomuzda tutmak isteseydik, bu bilgiyi saklamak için başka bir alana ihtiyacımız olurdu *Kind (Tip)*.
 
-As we didn't add it while creating the Movie table, now we'll write another migration to add it to our database.
+*Movie* tablosunu oluştururken bu alanı tanımlamadığımızdan, veritabanına eklemek için başka bir migration yazacağız.
 
-Create another migration file under *MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150924_142200_MovieKind.cs*:
+ *MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/ 
+ DefaultDB_20150924_142200_MovieKind.cs*: dosyasında yeni bir migration oluşturun:
 
 ```cs
 using FluentMigrator;
@@ -30,9 +31,9 @@ namespace MovieTutorial.Migrations.DefaultDB
 ```
 
 
-### Declaring a MovieKind Enumeration
+### MovieKind Enumeration'ının Tanımlanması
 
-Now as we added *Kind* column to *Movie* table, we need a set of movie kind values. Let's define it as an enumeration at *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs*:
+*Kind* alanı *Movie* tablosuna ekledikten sonra, film tiplerini içeren bir listeye ihtiyacımız olacak. *MovieTutorial.Web/Modules/MovieDB/Movie/MovieKind.cs* altında bir enum olarak tanımlayalım:
 
 ```cs
 using Serenity.ComponentModel;
