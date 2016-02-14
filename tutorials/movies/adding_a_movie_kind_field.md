@@ -55,7 +55,7 @@ namespace MovieTutorial.MovieDB
 ```
 
 
-### Adding Kind Field to MovieRow Entity
+### Kind (Tip) Alanının MovieRow Varlığına Eklenmesi
 
 As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs for *Kind* column manually. Add following property declaration in MovieRow.cs after *Runtime* property:
 
