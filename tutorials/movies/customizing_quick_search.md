@@ -153,13 +153,13 @@ Bu şablonları çalıştırmadan önce, solution ın başarılı bir şekilde d
 
 Solution'ı derledikten sonra *Build (Derleme)* menüsüne tıklayın ve ardından *Transform All Templates (Tüm Şablonları Dönüştür)*'e tıklayın.
 
-> If you are using a Serene version before 1.6.0, you might get an error like following:
+> Eğer Serene'nin 1.6.0 öncesi bir sürümündeyseniz, aşağıdakine benzer bir hata alabilirsiniz:
 
 > ```
 > Error CS0579 Duplicate 'Imported' attribute ...
 > ```
 > 
-> To resolve it, just remove following lines from file *MovieGrid.cs* under *MovieTutorial.Script/MovieDB/Movie*:
+> Çözmek için, *MovieTutorial.Script/MovieDB/Movie* altındaki *MovieGrid.cs* dosyasından şu satırları kaldırmanız yeterlidir:
 
 > ```cs
 > // Please remove this partial class or the first line below, 
@@ -170,8 +170,7 @@ Solution'ı derledikten sonra *Build (Derleme)* menüsüne tıklayın ve ardınd
 > }
 > ```
 
-
-We can use intellisense to replace hardcoded field names with compile time checked versions:
+Artık, string olarak yazılan alan isimleri yerine derleme zamanı kontrollü intellisense versiyonlarını yerleştirebiliriz:
 
 ```cs
 namespace MovieTutorial.MovieDB
@@ -200,4 +199,6 @@ namespace MovieTutorial.MovieDB
     }
 }
 ```
+
+> Aslında 1.7.0 dan sonra bunu yapmamıza gerek yoktu, çünkü Sergen MovieRow'un script sürümünü de başlangıçta üretir. Ancak, sonradan yeni alanlar eklediğinizde, bu alanların script tarafına taşınması için yine de bu şablonları dönüştüreceksiniz.
 
