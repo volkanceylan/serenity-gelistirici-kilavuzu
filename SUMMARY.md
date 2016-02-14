@@ -17,7 +17,7 @@
        * [Movie Tablosu İçin Kod Üretilmesi](tutorials/movies/generating_code_for_movie_table.md)
        * [Film Arayüzünün Özelleştirilmesi](tutorials/movies/customizing_movie_interface.md)
        * [Film Navigayonunun Ele Alınması](tutorials/movies/handling_movie_navigation.md)
-       * [Customizing Quick Search](tutorials/movies/customizing_quick_search.md)
+       * [Hızlı Aramanın Özelleştirilmesi](tutorials/movies/customizing_quick_search.md)
        * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
        * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
        * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
