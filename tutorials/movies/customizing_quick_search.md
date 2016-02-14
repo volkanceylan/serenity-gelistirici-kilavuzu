@@ -1,24 +1,24 @@
 
 # Hızlı Aramanın Özelleştirilmesi
 
-### Adding Several Movie Entries
+### Birkaç Film Kaydı Eklenmesi
 
-For the following sections, we need some sample data. We can copy and paste some from IMDB.
+Devam eden bölümler için bir miktar örnek veriye ihtiyacımız var. IMDB'den kopyala yapıştır yapabiliriz.
 
-If you don't want to waste your time entering this sample data, it is available as a migration at the link below:
+Eğer bununla vakit kaybetmek istemiyorsanız, aşağıdaki bağlantıda bir migration olarak mevcut:
 
 > https://github.com/volkanceylan/Serenity-Tutorials/blob/master/MovieTutorial/MovieTutorial/MovieTutorial.Web/Modules/Common/Migrations/DefaultDB/DefaultDB_20150923_172700_SampleMovies.cs
 
 
-![7 Movies Entered](img/movies_data_7.png)
+![7 Film Girilmiş](img/movies_data_7.png)
 
-If we typed *go* into search box, we would see two movies are filtered: *The Good, the Bad and the Ugly* and *The Godfather*.
+Eğer arama kutucuğuna *go* yazarsak, iki filmin süzüldüğünü görürüz: *The Good, the Bad and the Ugly* ve *The Godfather*.
 
-If we typed *Gandalf* we wouldn't be able to find anything. 
+Eğer *Gandalf* yazsaydık, hiçbirşey bulamayacaktık. 
 
-By default, Sergen determines first textual field of a table as *the name field*. In movies table it is *Title*. This field has a *QuickSearch* attribute on it that specifies that text searches should be performed on it.
+Sergen, varsayılan olarak tablonun ilk metinsel alanını *isim alanı (name field)* olarak seçer. Film tablomuzda bu alan *Title (Başlık)* tır. Bu alanın üstünde, metinsel aramaların bu alanda yapılacağını belirleyen bir *QuickSearch* niteliği (attribute) bulunmaktadır.
 
-> The name field is also determines initial sorting order and shown in edit dialog titles. 
+> İsim alanı ayrıca ilk sıralamaları belirler ve diyalog başlıklarında görüntülenir. 
 
 Sometimes, first textual column might not be the name field. If you wanted to change it to another field, you would do it in *MovieRow.cs*:
 
