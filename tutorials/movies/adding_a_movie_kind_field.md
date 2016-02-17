@@ -125,20 +125,20 @@ Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 
 Bu hata, MovieKind enumuration tipinin, istemci tarafında mevcut olmamasından kaynaklanır. Uygulamamızı çalıştırmadan önce T4 şablonlarını dönüştürmemiz gerekirdi.
 
-Now in Visual Studio, click *Build -> Transform All Templates* again.
+Visual Studio'da *Build -> Transform All Templates (Derleme -> Tüm Şablonları Dönüştür)* e tekrar tıklayın.
 
-Rebuild your solution and execute it. Now we have a nice dropdown in our form to select movie kind.
+Solution'ı tekrar rebuild edip, çalıştırın. Artık film formumuzda, film tipini seçebileceğimiz hoş bir çekme menümüz var:
 
 ![Movie Kind Selection](img/movies_kind_selection.png)
 
 
-### Declaring a Default Value for Movie Kind
+### Film Tipi İçin Bir Öndeğer Belirleme
 
-As *Kind* is a required field, we need to fill it in *Add Movie* dialog, otherwise we'll get a validation error.
+*Kind* zorunlu bir alan olduğundan, yeni bir film eklerken doldurmak zorundayız, aksi taktirde bir doğrulama (validation) hatası alırız.
 
-But most movies we'll store are feature films, so its default should be this value.
+Fakat saklayacağımız filmlerin büyük kısmı sinema filmi olacaktır, yani öndeğer olarak bu değer olmalı.
 
-To add a default value for *Kind* property, add a *DefaultValue* attribute like this:
+*Kind* property'sine bir öndeğer tanımlamak için, üstüne şunun gibi bir *DefaultValue* niteliği ekleyin:
 
 ```cs
 [DisplayName("Kind"), NotNull, DefaultValue(1)]
@@ -149,4 +149,4 @@ public MovieKind? Kind
 }
 ```
 
-Now, in *Add Movie* dialog, *Kind* field will come prefilled as *Film*.
+Artık *Add Movie (Film Ekle)* diyaloğumuzda *Kind (Tip)* alanı *Film* olarak dolu gelecektir.
