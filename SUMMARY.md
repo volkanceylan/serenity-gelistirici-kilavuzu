@@ -18,7 +18,7 @@
        * [Film Arayüzünün Özelleştirilmesi](tutorials/movies/customizing_movie_interface.md)
        * [Film Navigayonunun Ele Alınması](tutorials/movies/handling_movie_navigation.md)
        * [Hızlı Aramanın Özelleştirilmesi](tutorials/movies/customizing_quick_search.md)
-       * [Adding a Movie Kind Field](tutorials/movies/adding_a_movie_kind_field.md)
+       * [Film Tipi Alanının Eklenmesi](tutorials/movies/adding_a_movie_kind_field.md)
        * [Adding Movie Genres](tutorials/movies/adding_movie_genres.md)
        * [Updating Serenity Packages](tutorials/movies/updating_serenity_packages.md)
        * [The Cast and Characters They Played](tutorials/movies/the_cast_and_characters_they_played.md)
