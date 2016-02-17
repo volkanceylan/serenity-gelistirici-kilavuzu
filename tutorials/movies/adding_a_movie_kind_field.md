@@ -55,9 +55,9 @@ namespace MovieTutorial.MovieDB
 ```
 
 
-### Kind (Tip) Alanının MovieRow Varlığına Eklenmesi
+### Kind (Tip) Alanının MovieRow Entity'sine Eklenmesi
 
-As we are not using Sergen anymore, we need to add a mapping in our MovieRow.cs for *Kind* column manually. Add following property declaration in MovieRow.cs after *Runtime* property:
+Artık Sergen'i kullanmadığımıza göre, *Kind* kolonu için *MovieRow.cs* dosyamıza manuel olarak bir eşleme (mapping) eklemeliyiz. *Runtime* property'sinden sonra aşağıdaki property tanımını ekleyin:
 
 ```cs
 [DisplayName("Runtime (mins)")]
@@ -75,7 +75,7 @@ public MovieKind? Kind
 }
 ```
 
-We also need to declare a Int32Field object which is required for Serenity entity system. On the bottom of MovieRow.cs locate *RowFields* class and modify it to add *Kind* field after the *Runtime* field:
+Ek olarak, Serenity varlık (entity) sistemi için gerekli olan bir Int32Field nesnesi de tanımlamalıyız. *MovieRow.cs* dosyasının sonunda *RowFields* sınıfını bulun ve *Runtime* alanından sonra gelecek şekilde *Kind* alanını eklemek üzere düzenleyin:
 
 ```cs
 public class RowFields : RowFieldsBase
@@ -93,11 +93,13 @@ public class RowFields : RowFieldsBase
 ```
 
 
-### Adding Kind Selection To Our Movie Form
+### Film Formuna Tip Seçimi Ekleme
 
-If we build and run our project now, we'll see that there is no change in the Movie form, even if we added *Kind* field mapping to the *MovieRow*. This is because, fields shown/edited in the form are controlled by declerations in *MovieForm.cs*. 
+Eğer şimdi projemizi derleyip çalıştırırsak, film (Movie) formunda herhangi bir değişiklik olmadığını farkederiz. Oysa, *Kind* alanı için *MovieRow*'a bir eşleme eklemiştik. Bunun nedeni, formda gösterilip düzenlecek alanlarının *MovieForm.cs* dosyasındaki property tanımlarıyla kontrol edilmekte olmasıdır.
 
-Modify *MovieForm.cs* as below:
+> Row'daki bazı alanlar formda gösterilmeyebilir.
+
+*MovieForm.cs*'i aşağıdaki gibi düzenleyin:
 
 ```cs
 
@@ -115,13 +117,13 @@ namespace MovieTutorial.MovieDB.Forms
 }
 ```
 
-Now, build your solution and run it. When you try to edit a movie or add a new one, nothing will happen. This is an expected situation. If you check developer tools console of your browser (F12, inspect element etc.) you'll see such an error:
+Şimdi solution'ı derleyip çalıştırın. Bir film kaydını düzenlemeye ya da yeni bir tane eklemeye çalıştığınızda, hiçbirşey olmayacaktır. Bu beklenen bir durumdur. Eğer tarayıcınızın geliştirici araçları konsolunu kontrol ederseniz (F12, öğeyi incele vs.) şöyle bir hatayla karşılaşırsınız:
 
 ```txt
 Uncaught Can't find MovieTutorial.MovieDB.MovieKind enum type!
 ```
 
-This error is caused by MoveKind enumeration not available client side. We should run our T4 templates before executing our program.
+Bu hata, MovieKind enumuration tipinin, istemci tarafında mevcut olmamasından kaynaklanır. Uygulamamızı çalıştırmadan önce T4 şablonlarını dönüştürmemiz gerekirdi.
 
 Now in Visual Studio, click *Build -> Transform All Templates* again.
 
