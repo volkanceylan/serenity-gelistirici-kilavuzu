@@ -11,7 +11,7 @@ It can be registered just like CouchbaseDistributedCache and configuration is si
 ```xml
 <appSettings>
     <add key="DistributedCache" value="{
-	    ServerAddress: 'someredisserver:6379',
+	    Connection: 'someredisserver:6379',
 	    KeyPrefix: ''
     }"/>
 />
